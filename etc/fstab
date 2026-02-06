@@ -1,0 +1,31 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/mapper/root
+UUID=bb5878fe-e3b5-49f1-b530-cd807bd822bb /                     btrfs rw,relatime,compress=zstd:3,ssd,space_cache=v2,subvol=/@      0 0
+
+# /dev/mapper/home
+UUID=bb5878fe-e3b5-49f1-b530-cd807bd822bb /home                 btrfs rw,relatime,compress=zstd:3,ssd,space_cache=v2,subvol=/@home  0 0
+
+# /dev/mapper/cache/pacman/pkg
+UUID=bb5878fe-e3b5-49f1-b530-cd807bd822bb /var/cache/pacman/pkg	btrfs rw,relatime,compress=zstd:3,ssd,space_cache=v2,subvol=/@pkg   0 0
+
+# /dev/mapper/var/log
+UUID=bb5878fe-e3b5-49f1-b530-cd807bd822bb /var/log              btrfs rw,relatime,compress=zstd:3,ssd,space_cache=v2,subvol=/@log   0 0
+
+# /dev/mapper/.snapshots
+UUID=bb5878fe-e3b5-49f1-b530-cd807bd822bb /.snapshots           btrfs rw,relatime,compress=zstd:3,ssd,space_cache=v2,subvol=/@snapshots 0 0
+
+# /dev/sda1
+UUID=4750-6C6B /boot                                            vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 2
+
+# Linux Games
+UUID=883d3b7a-26cb-451e-b38f-7f5ffc6d88fe /mnt/linux-games      ext4 defaults 0 2
+
+# SSD 120GB - Backup
+UUID=73C04D202233F9B6                     /mnt/ssd-120-backup   ntfs3 defaults,uid=1000,gid=100,umask=0022 0 0
+
+# Swapfile
+/swap/swapfile                            none                  swap defaults 0 0
+
