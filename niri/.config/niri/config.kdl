@@ -45,29 +45,6 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
-/-output "DP-1" {
-    mode "3440x1444@160"
-    scale 1
-    transform "normal"
-    position x=2560 y=0
-    focus-at-startup
-
-    hot-corners {
-      off
-    }
-}
-
-/-output "DP-2" {
-    mode "2560x1080@75"
-    scale 1
-    transform "normal"
-    position x=0 y=0
-
-    hot-corners {
-      off
-    }
-}
-
 layout {
     gaps 8
     center-focused-column "never"
@@ -129,35 +106,6 @@ animations {
 }
 
 window-rule {
-    open-maximized false
-    default-column-width { proportion 0.5; }
-}
-
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // block-out-from "screencast"
-}
-
-window-rule {
-    geometry-corner-radius 8
-    clip-to-geometry true
-}
-
-window-rule {
     match app-id=r#"^org\.gnome\."#
     draw-border-with-background false
     geometry-corner-radius 12
@@ -184,12 +132,39 @@ window-rule {
     open-floating true
 }
 
+// Block out sensitive components from screencasts
+layer-rule {
+    match namespace="^dms:clipboard$"
+
+    block-out-from "screencast"
+}
+
+// Shadow
+layer-rule {
+    match namespace="^dms:bar$"
+    match namespace="^dms:dock$"
+    match namespace="rofi"
+
+    shadow {
+        on
+        // off
+        softness 40
+        spread 5
+        offset x=0 y=5
+        draw-behind-window true
+        color "#00000064"
+        // inactive-color "#00000064"
+    }
+}
+
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Apps
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+B hotkey-overlay-title="Open a Browser: chromium" { spawn "chromium"; }
+    Mod+D hotkey-overlay-title="Open D-Menu" { spawn-sh "~/.local/bin/pacman.sh"; }
 
     // DMS
     // Application Launchers
@@ -369,3 +344,5 @@ include "dms/binds.kdl"
 include "dms/wpblur.kdl"
 include "dms/cursor.kdl"
 include "dms/layout.kdl"
+
+include "dms/outputs.kdl"

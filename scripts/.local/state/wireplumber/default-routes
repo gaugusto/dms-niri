@@ -1,0 +1,3 @@
+[default-routes]
+alsa_card.pci-0000_2b_00.1:output:hdmi-output-0={"channelVolumes":[0.068923, 0.068923], "channelMap":["FL", "FR"], "iec958Codecs":["PCM"], "latencyOffsetNsec":0, "mute":false}
+alsa_card.pci-0000_2b_00.1:profile:output:hdmi-stereo=["hdmi-output-0"]
