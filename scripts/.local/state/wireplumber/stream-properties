@@ -1,3 +1,0 @@
-[stream-properties]
-Output/Audio:application.name:Chromium={"channelVolumes":[1.000000, 1.000000], "volume":1.000000, "channelMap":["FL", "FR"], "mute":false}
-Input/Audio:media.role:Music={"channelVolumes":[1.000000, 1.000000], "volume":1.000000, "channelMap":["FL", "FR"], "mute":false}
