@@ -10,7 +10,7 @@ CONFIGS=(
   "Remove pacman orphans - sudo pacman -Rs \$(pacman -Qdtq)"
 )
 
-CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | rofi -dmenu)
+CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | rofi -dmenu -p "")
 
 # Se o usuário cancelar, sai do script
 [ -z "$CHOICE" ] && exit 1

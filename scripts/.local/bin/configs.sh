@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-EDITOR="kitty -e nvim"
+EDITOR="alacritty -e nvim"
 
 CONFIGS=(
   "Niri             ~/.config/niri/."
