@@ -20,7 +20,7 @@ input {
 
     }
 
-    // warp-mouse-to-focus
+    warp-mouse-to-focus
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
@@ -127,9 +127,18 @@ binds {
   Mod+Shift+Slash { show-hotkey-overlay; }
 
   // Apps
-  Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
-  Mod+B hotkey-overlay-title="Open a Browser: chromium" { spawn "chromium"; }
-  Mod+D hotkey-overlay-title="Open D-Menu" { spawn-sh "~/.local/bin/pacman.sh"; }
+  Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" {
+    spawn "alacritty"; 
+  }
+  Mod+B hotkey-overlay-title="Open a Browser: chromium" { 
+    spawn "chromium"; 
+  }
+  Mod+D hotkey-overlay-title="Open D-Menu" {
+    spawn-sh "~/.local/bin/pacman.sh"; 
+  }
+  Mod+E hotkey-overlay-title="Nautilus" {
+    spawn "nautilus";
+  }
 
 
   // DMS
