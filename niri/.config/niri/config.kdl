@@ -20,8 +20,8 @@ input {
 
     }
 
-    warp-mouse-to-focus
-    // focus-follows-mouse max-scroll-amount="0%"
+    // warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="0%"
 }
 
 layout {
@@ -139,7 +139,6 @@ binds {
   Mod+E hotkey-overlay-title="Nautilus" {
     spawn "nautilus";
   }
-
 
   // DMS
   // Application Launchers

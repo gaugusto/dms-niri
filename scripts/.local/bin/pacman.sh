@@ -18,4 +18,4 @@ CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | rofi -dmenu -p "")
 # 1. Pega apenas o caminho (último campo)
 COMMAND=$(printf '%s\n' "${CHOICE}" | awk -F ' - ' '{print $NF}')
 
-kitty -e bash -c "$COMMAND; echo; read -p 'Pressione Enter para sair...' -n1 -s"
+alacritty -e bash -c "$COMMAND; echo; read -p 'Pressione Enter para sair...' -n1 -s"
