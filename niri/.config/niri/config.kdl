@@ -55,8 +55,8 @@ hotkey-overlay {
     skip-at-startup
 }
 
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 prefer-no-csd
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 screenshot-path "~/Imagens/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
@@ -108,7 +108,7 @@ layer-rule {
 layer-rule {
     match namespace="^dms:bar$"
     match namespace="^dms:dock$"
-    match namespace="rofi"
+    match namespace="^rofi$"
 
     shadow {
         on
@@ -145,16 +145,16 @@ binds {
   Mod+Space hotkey-overlay-title="Application Launcher" {
     spawn "dms" "ipc" "call" "spotlight" "toggle";
   }
-  Mod+Ctrl+Alt+C hotkey-overlay-title="Clipboard Manager" {
+  Mod+C hotkey-overlay-title="Clipboard Manager" {
     spawn "dms" "ipc" "call" "clipboard" "toggle";
   }
-  Mod+Ctrl+Alt+M hotkey-overlay-title="Task Manager" {
+  Mod+M hotkey-overlay-title="Task Manager" {
     spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
   }
-  Mod+Ctrl+Alt+Comma hotkey-overlay-title="Settings" {
+  Mod+Ctrl+Comma hotkey-overlay-title="Settings" {
     spawn "dms" "ipc" "call" "settings" "focusOrToggle";
   }
-  Mod+Ctrl+Alt+N hotkey-overlay-title="Notification Center" {
+  Mod+Ctrl+N hotkey-overlay-title="Notification Center" {
     spawn "dms" "ipc" "call" "notifications" "toggle";
   }
   Mod+Y hotkey-overlay-title="Browse Wallpapers" {
@@ -162,17 +162,17 @@ binds {
   }
 
 
-  Mod+Ctrl+Alt+R hotkey-overlay-title="Random Wallpaper" { 
+  Mod+Alt+R hotkey-overlay-title="Random Wallpaper" { 
     spawn "dms" "ipc" "call" "wallpaper" "next"; 
   }
   Mod+Alt+N hotkey-overlay-title="Notepad" { 
     spawn "dms" "ipc" "call" "notepad" "toggle"; 
   }
 
-  Mod+Shift+L hotkey-overlay-title="Lock Screen" {
+  Mod+Ctrl+Alt+L hotkey-overlay-title="Lock Screen" {
     spawn "dms" "ipc" "call" "lock" "lock";
   }
-  Mod+Shift+Ctrl+N hotkey-overlay-title="Night mode" {
+  Mod+Shift+N hotkey-overlay-title="Night mode" {
     spawn "dms" "ipc" "call" "night" "toggle";
   }
   Mod+Escape hotkey-overlay-title="Power menu" {
@@ -199,28 +199,27 @@ binds {
   }
 
   Mod+O repeat=false { toggle-overview; }
-
   Mod+Q repeat=false { close-window; }
 
-  Mod+H          { focus-column-left; }
-  Mod+J          { focus-window-or-workspace-down; }
-  Mod+K          { focus-window-or-workspace-up; }
-  Mod+L          { focus-column-right; }
+  Mod+H       { focus-column-left; }
+  Mod+J       { focus-window-or-workspace-down; }
+  Mod+K       { focus-window-or-workspace-up; }
+  Mod+L       { focus-column-right; }
 
-  Mod+Ctrl+H     { move-column-left; }
-  Mod+Ctrl+L     { move-column-right; }
-  Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-  Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+  Mod+Ctrl+H  { move-column-left; }
+  Mod+Ctrl+L  { move-column-right; }
+  Mod+Ctrl+J  { move-window-down-or-to-workspace-down; }
+  Mod+Ctrl+K  { move-window-up-or-to-workspace-up; }
 
-  Mod+Alt+H      { focus-monitor-left; }
-  Mod+Alt+J      { focus-monitor-down; }
-  Mod+Alt+K      { focus-monitor-up; }
-  Mod+Alt+L      { focus-monitor-right; }
+  Mod+Alt+H   { focus-monitor-left; }
+  Mod+Alt+J   { focus-monitor-down; }
+  Mod+Alt+K   { focus-monitor-up; }
+  Mod+Alt+L   { focus-monitor-right; }
 
-  Mod+Ctrl+Alt+H { move-column-to-monitor-left; }
-  Mod+Ctrl+Alt+J { move-column-to-monitor-down; }
-  Mod+Ctrl+Alt+K { move-column-to-monitor-up; }
-  Mod+Ctrl+Alt+L { move-column-to-monitor-right; }
+  Mod+Shift+H { move-column-to-monitor-left; }
+  Mod+Shift+J { move-column-to-monitor-down; }
+  Mod+Shift+K { move-column-to-monitor-up; }
+  Mod+Shift+L { move-column-to-monitor-right; }
 
   // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
   // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
