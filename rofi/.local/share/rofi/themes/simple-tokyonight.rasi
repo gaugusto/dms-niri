@@ -1,6 +1,6 @@
 * {
   // font:   "Iosevka Nerd Font Medium 11";
-  font:   "JetBrainsMono Nerd Font Medium 12";
+  font:   "JetBrainsMono Nerd Font Medium 11";
 
   bg0     : #1a1b26;
   bg1     : #1f2335;
@@ -16,11 +16,11 @@
   magenta : #9a7ecc;
   cyan    : #4abaaf;
 
-  accent: @red;
+  accent: @blue;
   urgent: @yellow;
 
   background-color : transparent;
-  text-color       : @fg0;
+  text-color       : @cyan;
 
   margin  : 0;
   padding : 0;
@@ -34,22 +34,26 @@ element-icon, element-text, scrollbar {
 window {
   location : center;
   width    : 480px;
-  height   : 480px;
+  // height   : 480px;
   x-offset : 4px;
   y-offset : 26px;
 
   background-color: @bg1;
   border: 1px;
   border-color: @bg3;
-  border-radius: 6px;
+  border-radius: 12px;
+
+  padding: 8px;
 }
 
 inputbar {
   spacing  : 8px;
-  padding  : 4px 8px;
+  padding  : 8px 8px;
+  margin   : 8px 0px;
+  border-radius: 12px;
   children : [ icon-search, entry ];
 
-  background-color: @bg0;
+  background-color: @bg3;
 }
 
 icon-search, entry, element-icon, element-text {
@@ -71,13 +75,13 @@ listview {
   padding      : 4px 0px;
   lines        : 12;
   columns      : 1;
-  scrollbar    : true;
+  scrollbar    : false;
   fixed-height : false;
   dynamic      : true;
 }
 
 element {
-  padding : 4px 8px;
+  padding : 4px 4px;
   spacing : 8px;
 }
 
@@ -96,6 +100,7 @@ element alternate active {
 element selected {
   text-color       : @bg1;
   background-color : @accent;
+  border-radius: 12px;
 }
 
 element selected urgent {

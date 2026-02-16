@@ -16,6 +16,7 @@ PACKAGES=(
   dms-shell-bin
   edk2-shell
   efibootmgr
+  eza
   flatpak
   fzf
   gamemode
