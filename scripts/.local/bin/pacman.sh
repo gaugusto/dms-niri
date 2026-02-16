@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
 CONFIGS=(
-  "Atualizar tudo        - yay"
-  "Atualizar AUR         - yay -Sua"
-  "Estatísticas          - yay -Ps"
-  "Limpar cache          - yay -Sc"
-  "Explict Installed     - pacman -Qet"
-  "Clean pacman cache    - sudo pacman -Scc"
+  "Atualizar tudo - yay"
+  "Atualizar AUR - yay -Sua"
+  "Estatísticas - yay -Ps"
+  "Limpar cache - yay -Sc"
+  "Explict Installed - pacman -Qet"
+  "Clean pacman cache - sudo pacman -Scc"
   "Remove pacman orphans - sudo pacman -Rs \$(pacman -Qdtq)"
 )
 
-CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | rofi -dmenu -p "")
+CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | rofi -dmenu -i)
 
 # Se o usuário cancelar, sai do script
 [ -z "$CHOICE" ] && exit 1

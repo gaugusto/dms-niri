@@ -3,14 +3,15 @@
 EDITOR="alacritty -e nvim"
 
 CONFIGS=(
-  "Niri             ~/.config/niri/."
-  "Vim              ~/.config/vim/."
-  "Rofi             ~/.config/rofi/."
-  "Rofi Themes      ~/.local/share/rofi/."
-  "Scripts          ~/.local/bin/."
+  "Alacritty ~/.config/alacritty/."
+  "Niri ~/.config/niri/."
+  "Nvim  ~/.config/nvim/."
+  "Rofi ~/.config/rofi/."
+  "Rofi Themes ~/.local/share/rofi/."
+  "Scripts ~/.local/bin/."
 )
 
-CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | rofi -dmenu)
+CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | rofi -dmenu -i)
 
 # Se o usuário cancelar, sai do script
 [ -z "$CHOICE" ] && exit 1
