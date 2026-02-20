@@ -4,7 +4,7 @@ input {
             layout "br"
         }
         repeat-delay 200
-        repeat-rate 25
+        repeat-rate 35
         numlock
     }
 
@@ -88,6 +88,8 @@ window-rule {
 window-rule {
     match app-id=r#"org.quickshell$"#
     match app-id=r#"steam$"#
+    match app-id="org.gnome.Calculator"
+    match app-id="nwg-look"
     open-floating true
 }
 
@@ -159,6 +161,9 @@ binds {
   }
   Mod+Y hotkey-overlay-title="Browse Wallpapers" {
     spawn "dms" "ipc" "call" "dankdash" "wallpaper";
+  }
+  Mod+P hotkey-overlay-title="Color pick" {
+    spawn "dms" "color" "pick" "-a";
   }
 
 
