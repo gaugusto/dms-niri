@@ -90,6 +90,7 @@ window-rule {
     match app-id=r#"steam$"#
     match app-id="org.gnome.Calculator"
     match app-id="nwg-look"
+    match app-id="pavucontrol"
     open-floating true
 }
 
@@ -146,6 +147,9 @@ binds {
   // Application Launchers
   Mod+Space hotkey-overlay-title="Application Launcher" {
     spawn "dms" "ipc" "call" "spotlight" "toggle";
+  }
+  Mod+Alt+Space hotkey-overlay-title="Application Launcher" {
+    spawn "rofi" "-show" "drun" "-show-icons";
   }
   Mod+C hotkey-overlay-title="Clipboard Manager" {
     spawn "dms" "ipc" "call" "clipboard" "toggle";
