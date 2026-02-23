@@ -1,6 +1,6 @@
 * {
   // font:   "Iosevka Nerd Font Medium 11";
-  font:   "JetBrainsMono Nerd Font Medium 11";
+  font:   "JetBrainsMono Nerd Font Medium 12";
 
   bg0     : #1a1b26;
   bg1     : #1f2335;
@@ -16,11 +16,11 @@
   magenta : #9a7ecc;
   cyan    : #4abaaf;
 
-  accent: @blue;
+  accent: @magenta;
   urgent: @yellow;
 
   background-color : transparent;
-  text-color       : @cyan;
+  text-color       : @fg0;
 
   margin  : 0;
   padding : 0;
@@ -81,7 +81,7 @@ listview {
 }
 
 element {
-  padding : 4px 4px;
+  padding : 10px 10px;
   spacing : 8px;
 }
 

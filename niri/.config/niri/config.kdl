@@ -20,8 +20,8 @@ input {
 
     }
 
-    // warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="0%"
+    warp-mouse-to-focus
+    // focus-follows-mouse max-scroll-amount="0%"
 }
 
 layout {
@@ -148,7 +148,7 @@ binds {
   Mod+Space hotkey-overlay-title="Application Launcher" {
     spawn "dms" "ipc" "call" "spotlight" "toggle";
   }
-  Mod+Alt+Space hotkey-overlay-title="Application Launcher" {
+  Mod+Alt+Space hotkey-overlay-title="Show rofi" {
     spawn "rofi" "-show" "drun" "-show-icons";
   }
   Mod+C hotkey-overlay-title="Clipboard Manager" {
@@ -171,7 +171,7 @@ binds {
   }
 
 
-  Mod+Alt+R hotkey-overlay-title="Random Wallpaper" { 
+  Mod+Alt+W hotkey-overlay-title="Random Wallpaper" { 
     spawn "dms" "ipc" "call" "wallpaper" "next"; 
   }
   Mod+Alt+N hotkey-overlay-title="Notepad" { 
