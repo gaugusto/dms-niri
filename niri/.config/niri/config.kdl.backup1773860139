@@ -51,66 +51,17 @@ layout {
     }
 }
 
-cursor {
-    xcursor-theme "catppuccin-mocha-dark-cursors"
-    xcursor-size 24
-    hide-when-typing
-    hide-after-inactive-ms 1000
-}
-
-overview {
-    zoom 0.5
-    backdrop-color "#1a1b26"
-
-    workspace-shadow {
-        // off
-        softness 40
-        spread 10
-        offset x=0 y=10
-        color "#00000050"
-    }
-}
-
 hotkey-overlay {
     skip-at-startup
 }
 
 prefer-no-csd
-// spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 screenshot-path "~/Imagens/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
     // off
     slowdown 3.0
-}
-
-workspace "󰖟"
-workspace ""
-workspace "󰉌"
-workspace ""
-
-window-rule {
-    match app-id="firefox"
-    match app-id="chromium"
-    open-on-workspace "󰖟"
-    open-maximized true
-}
-
-window-rule {
-    match app-id="Alacritty"
-    open-on-workspace ""
-}
-
-window-rule {
-    match app-id="org.gnome.Nautilus"
-    open-on-workspace "󰉌"
-    open-maximized true
-}
-
-window-rule {
-    match app-id="mpv"
-    open-on-workspace ""
-    open-maximized true
 }
 
 window-rule {
@@ -191,11 +142,9 @@ binds {
   Mod+E hotkey-overlay-title="Nautilus" {
     spawn "nautilus";
   }
-  Mod+Shift+Y hotkey-overlay-title="Youtube" {
-    spawn-sh ".local/bin/youtube.sh";
-  }
 
   // DMS
+  // Application Launchers
   Mod+Space hotkey-overlay-title="Application Launcher" {
     spawn "dms" "ipc" "call" "spotlight" "toggle";
   }
@@ -229,7 +178,7 @@ binds {
     spawn "dms" "ipc" "call" "notepad" "toggle"; 
   }
 
-  Ctrl+Alt+L hotkey-overlay-title="Lock Screen" {
+  Mod+Ctrl+Alt+L hotkey-overlay-title="Lock Screen" {
     spawn "dms" "ipc" "call" "lock" "lock";
   }
   Mod+Shift+N hotkey-overlay-title="Night mode" {
@@ -261,25 +210,25 @@ binds {
   Mod+O repeat=false { toggle-overview; }
   Mod+Q repeat=false { close-window; }
 
-  Mod+H          { focus-column-left; }
-  Mod+L          { focus-column-right; }
-  Mod+J          { focus-window-or-workspace-down; }
-  Mod+K          { focus-window-or-workspace-up; }
+  Mod+H       { focus-column-left; }
+  Mod+J       { focus-window-or-workspace-down; }
+  Mod+K       { focus-window-or-workspace-up; }
+  Mod+L       { focus-column-right; }
 
-  Mod+Ctrl+H     { move-column-left; }
-  Mod+Ctrl+L     { move-column-right; }
-  Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-  Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+  Mod+Ctrl+H  { move-column-left; }
+  Mod+Ctrl+L  { move-column-right; }
+  Mod+Ctrl+J  { move-window-down-or-to-workspace-down; }
+  Mod+Ctrl+K  { move-window-up-or-to-workspace-up; }
 
-  Mod+Alt+H      { focus-monitor-left; }
-  Mod+Alt+L      { focus-monitor-right; }
-  // Mod+Alt+J      { focus-monitor-down; }
-  // Mod+Alt+K      { focus-monitor-up; }
+  Mod+Alt+H   { focus-monitor-left; }
+  Mod+Alt+J   { focus-monitor-down; }
+  Mod+Alt+K   { focus-monitor-up; }
+  Mod+Alt+L   { focus-monitor-right; }
 
-  Mod+Ctrl+Alt+H { move-column-to-monitor-left; }
-  Mod+Ctrl+Alt+L { move-column-to-monitor-right; }
-  // Mod+Ctrl+Alt+J { move-column-to-monitor-down; }
-  // Mod+Ctrl+Alt+K { move-column-to-monitor-up; }
+  Mod+Shift+H { move-column-to-monitor-left; }
+  Mod+Shift+J { move-column-to-monitor-down; }
+  Mod+Shift+K { move-column-to-monitor-up; }
+  Mod+Shift+L { move-column-to-monitor-right; }
 
   // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
   // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
@@ -387,5 +336,3 @@ include "dms/cursor.kdl"
 include "dms/layout.kdl"
 
 include "dms/outputs.kdl"
-
-include "dms/windowrules.kdl"
