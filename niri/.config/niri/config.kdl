@@ -182,8 +182,8 @@ binds {
   Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" {
     spawn "alacritty"; 
   }
-  Mod+B hotkey-overlay-title="Open a Browser: chromium" { 
-    spawn "chromium"; 
+  Mod+B hotkey-overlay-title="Open a Browser: firefox" { 
+    spawn "firefox"; 
   }
   Mod+D hotkey-overlay-title="Open D-Menu" {
     spawn-sh "~/.local/bin/dmenus"; 
