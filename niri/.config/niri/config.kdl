@@ -86,8 +86,9 @@ animations {
 
 workspace "󰖟"
 workspace ""
-workspace "󰉌"
+workspace "󰪶"
 workspace ""
+workspace "󰺷"
 
 window-rule {
     match app-id="firefox"
@@ -103,14 +104,27 @@ window-rule {
 
 window-rule {
     match app-id="org.gnome.Nautilus"
-    open-on-workspace "󰉌"
-    open-maximized true
+    open-on-workspace "󰪶"
 }
 
 window-rule {
     match app-id="mpv"
     open-on-workspace ""
     open-maximized true
+}
+
+window-rule {
+  match app-id="gamescope"
+  open-on-output "DP-2"
+  open-fullscreen true
+  open-on-workspace "󰺷"
+}
+
+window-rule {
+  match app-id=r#"steam$"#
+  open-on-output "DP-2"
+  open-on-workspace "󰺷"
+  open-floating true
 }
 
 window-rule {
@@ -136,18 +150,12 @@ window-rule {
 
 window-rule {
     match app-id=r#"org.quickshell$"#
-    match app-id=r#"steam$"#
     match app-id="org.gnome.Calculator"
     match app-id="nwg-look"
     match app-id="pavucontrol"
     open-floating true
 }
 
-window-rule {
-  match app-id="gamescope"
-  open-on-output "DP-1"
-  open-fullscreen true
-}
 
 // Block out sensitive components from screencasts
 layer-rule {
@@ -193,6 +201,9 @@ binds {
   }
   Mod+Shift+Y hotkey-overlay-title="Youtube" {
     spawn-sh ".local/bin/youtube.sh";
+  }
+  Mod+Alt+P hotkey-overlay-title="Youtube" {
+    spawn-sh ".local/bin/pass.sh";
   }
 
   // DMS
