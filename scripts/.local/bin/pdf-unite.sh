@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-selected_pdfs=$(ls *.pdf 2>/dev/null | fzf -m --ansi --header "Selecione os PDFs com TAB (a ordem importa!)" \
+selected_pdfs=$(ls *.pdf 2>/dev/null | fzf -m --layout reverse --border --height 80% --ansi --header "Selecione os PDFs com TAB (a ordem importa!)" \
     --preview "pdftotext -l 1 {} - 2>/dev/null | head -n 20")
 
 if [ -z "$selected_pdfs" ]; then
