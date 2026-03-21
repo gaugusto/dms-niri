@@ -117,7 +117,6 @@ window-rule {
   match app-id="gamescope"
   open-on-output "DP-2"
   open-fullscreen true
-  open-on-workspace "󰺷"
 }
 
 window-rule {
@@ -153,6 +152,7 @@ window-rule {
     match app-id="org.gnome.Calculator"
     match app-id="nwg-look"
     match app-id="pavucontrol"
+    match app-id="Pinentry-gtk"
     open-floating true
 }
 
@@ -188,13 +188,13 @@ binds {
 
   // Apps
   Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" {
-    spawn "alacritty"; 
+    spawn "alacritty";
   }
-  Mod+B hotkey-overlay-title="Open a Browser: firefox" { 
-    spawn "firefox"; 
+  Mod+B hotkey-overlay-title="Open a Browser: firefox" {
+    spawn "firefox";
   }
   Mod+D hotkey-overlay-title="Open D-Menu" {
-    spawn-sh "~/.local/bin/dmenus"; 
+    spawn-sh "~/.local/bin/dmenus";
   }
   Mod+E hotkey-overlay-title="Nautilus" {
     spawn "nautilus";
@@ -233,11 +233,11 @@ binds {
   }
 
 
-  Mod+Alt+W hotkey-overlay-title="Random Wallpaper" { 
-    spawn "dms" "ipc" "call" "wallpaper" "next"; 
+  Mod+Alt+W hotkey-overlay-title="Random Wallpaper" {
+    spawn "dms" "ipc" "call" "wallpaper" "next";
   }
-  Mod+Alt+N hotkey-overlay-title="Notepad" { 
-    spawn "dms" "ipc" "call" "notepad" "toggle"; 
+  Mod+Alt+N hotkey-overlay-title="Notepad" {
+    spawn "dms" "ipc" "call" "notepad" "toggle";
   }
 
   Ctrl+Alt+L hotkey-overlay-title="Lock Screen" {

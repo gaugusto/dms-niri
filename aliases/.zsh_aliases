@@ -1,5 +1,7 @@
+alias nvim='bob run nightly'
 
 alias fzf='fzf --height 80% --layout reverse --border'
-alias pac-info="pacman -Qq | fzf --preview 'pacman -Qi {}'"
-alias pac-install="pacman -Sl | awk '{print \$2}' | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman --needed -S"
-alias pac-uninstall="pacman -Qq | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman -Rsc"
+
+alias pinfo="pacman -Qq | fzf --preview 'pacman -Qi {}'"
+alias pinstall="pacman -Sl | awk '{print \$2}' | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman --needed -S"
+alias puninstall="pacman -Qq | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman -Rsc"
