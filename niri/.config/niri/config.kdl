@@ -21,7 +21,7 @@ input {
     }
 
     warp-mouse-to-focus
-    // focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse max-scroll-amount="0%"
 }
 
 layout {
@@ -86,9 +86,9 @@ animations {
 
 workspace "󰖟"
 workspace ""
-workspace "󰪶"
 workspace ""
 workspace "󰺷"
+workspace "󰪶"
 
 window-rule {
     match app-id="firefox"
@@ -202,7 +202,7 @@ binds {
   Mod+Shift+Y hotkey-overlay-title="Youtube" {
     spawn-sh ".local/bin/youtube.sh";
   }
-  Mod+Alt+P hotkey-overlay-title="Youtube" {
+  Mod+Alt+P hotkey-overlay-title="Passwords" {
     spawn-sh ".local/bin/pass.sh";
   }
 
