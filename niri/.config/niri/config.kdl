@@ -17,6 +17,8 @@ input {
     repeat-rate 35
     numlock
   }
+  warp-mouse-to-focus
+  focus-follows-mouse max-scroll-amount="0%"
 }
 
 overview {
@@ -30,6 +32,58 @@ overview {
         offset x=0 y=10
         color "#00000050"
     }
+}
+
+workspace "󰖟" {
+  open-on-output "DP-1"
+}
+workspace "" {
+  open-on-output "DP-1"
+}
+workspace "" {
+  open-on-output "DP-1"
+}
+workspace "󰺷" {
+  open-on-output "DP-1"
+}
+workspace "󰪶" {
+  open-on-output "DP-1"
+}
+
+window-rule {
+    match app-id="firefox"
+    match app-id="chromium"
+    open-on-workspace "󰖟"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="Alacritty"
+    open-on-workspace ""
+}
+
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    open-on-workspace "󰪶"
+}
+
+window-rule {
+    match app-id="mpv"
+    open-on-workspace ""
+    open-maximized true
+}
+
+window-rule {
+  match app-id="gamescope"
+  open-on-output "DP-1"
+  open-fullscreen true
+}
+
+window-rule {
+  match app-id=r#"steam$"#
+  open-on-output "DP-1"
+  open-on-workspace "󰺷"
+  open-floating true
 }
 
 window-rule {
