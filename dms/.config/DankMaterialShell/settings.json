@@ -20,7 +20,7 @@
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
   "cornerRadius": 12,
-  "niriLayoutGapsOverride": 5,
+  "niriLayoutGapsOverride": 8,
   "niriLayoutRadiusOverride": 12,
   "niriLayoutBorderSize": 3,
   "hyprlandLayoutGapsOverride": -1,
@@ -421,7 +421,8 @@
       "layout": {
         "alwaysCenterSingleColumn": true
       },
-      "focusAtStartup": true
+      "focusAtStartup": true,
+      "vrrOnDemand": true
     },
     "DP-2": {
       "hotCorners": {
@@ -430,7 +431,8 @@
       "focusAtStartup": false,
       "layout": {
         "alwaysCenterSingleColumn": true
-      }
+      },
+      "vrrOnDemand": true
     }
   },
   "hyprlandOutputSettings": {},
@@ -562,7 +564,11 @@
   "desktopWidgetGridSettings": {},
   "desktopWidgetInstances": [],
   "desktopWidgetGroups": [],
-  "builtInPluginSettings": {},
+  "builtInPluginSettings": {
+    "dms_settings_search": {
+      "trigger": "?"
+    }
+  },
   "clipboardEnterToPaste": false,
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
