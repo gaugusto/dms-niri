@@ -24,39 +24,64 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
-layout {
-    gaps 8
-    center-focused-column "never"
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-    }
-    default-column-width { proportion 0.5; }
-    focus-ring {
+output "DP-1" {
+    // off
+    mode "3440x1440@180.000"
+    scale 1.0
+    position x=0 y=0
+    variable-refresh-rate on-demand=true
+    focus-at-startup
+
+    hot-corners {
         off
     }
+}
 
-    border {
-        on
-        width 3
-    }
+output "DP-2" {
+    // off
+    mode "3440x1440@100"
+    scale 1.0
+    position x=1440 y=0
+    // variable-refresh-rate on-demand=true
 
-    shadow {
-        on
-        softness 30
-        spread 5
-        offset x=0 y=5
-        color "#0007"
+    hot-corners {
+        off
     }
 }
 
-cursor {
-    xcursor-theme "catppuccin-mocha-dark-cursors"
-    xcursor-size 24
-    hide-when-typing
-    hide-after-inactive-ms 1000
-}
+// layout {
+//     gaps 8
+//     center-focused-column "never"
+//     preset-column-widths {
+//         proportion 0.33333
+//         proportion 0.5
+//         proportion 0.66667
+//     }
+//     default-column-width { proportion 0.5; }
+//     focus-ring {
+//         off
+//     }
+//
+//     border {
+//         on
+//         width 3
+//     }
+//
+//     shadow {
+//         on
+//         softness 30
+//         spread 5
+//         offset x=0 y=5
+//         color "#0007"
+//     }
+// }
+
+// cursor {
+//     xcursor-theme "catppuccin-mocha-dark-cursors"
+//     xcursor-size 24
+//     hide-when-typing
+//     hide-after-inactive-ms 1000
+// }
 
 overview {
     zoom 0.5
@@ -84,11 +109,21 @@ animations {
     slowdown 3.0
 }
 
-workspace "󰖟"
-workspace ""
-workspace ""
-workspace "󰺷"
-workspace "󰪶"
+workspace "󰖟" {
+  open-on-output "DP-1"
+}
+workspace "" {
+  open-on-output "DP-1"
+}
+workspace "" {
+  open-on-output "DP-1"
+}
+workspace "󰺷" {
+  open-on-output "DP-1"
+}
+workspace "󰪶" {
+  open-on-output "DP-1"
+}
 
 window-rule {
     match app-id="firefox"
@@ -115,13 +150,13 @@ window-rule {
 
 window-rule {
   match app-id="gamescope"
-  open-on-output "DP-2"
+  open-on-output "DP-1"
   open-fullscreen true
 }
 
 window-rule {
   match app-id=r#"steam$"#
-  open-on-output "DP-2"
+  open-on-output "DP-1"
   open-on-workspace "󰺷"
   open-floating true
 }
@@ -392,11 +427,6 @@ binds {
 }
 
 include "dms/colors.kdl"
-include "dms/binds.kdl"
 include "dms/wpblur.kdl"
 include "dms/cursor.kdl"
 include "dms/layout.kdl"
-
-include "dms/outputs.kdl"
-
-include "dms/windowrules.kdl"
