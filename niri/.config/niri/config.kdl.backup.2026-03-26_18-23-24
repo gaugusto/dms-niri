@@ -21,33 +21,78 @@ input {
     }
 
     warp-mouse-to-focus
-    // focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse max-scroll-amount="0%"
 }
 
-layout {
-    gaps 8
-    center-focused-column "never"
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-    }
-    default-column-width { proportion 0.5; }
-    focus-ring {
+output "DP-1" {
+    // off
+    mode "3440x1440@180.000"
+    scale 1.0
+    position x=0 y=0
+    variable-refresh-rate on-demand=true
+    focus-at-startup
+
+    hot-corners {
         off
     }
+}
 
-    border {
-        on
-        width 3
+output "DP-2" {
+    // off
+    mode "3440x1440@100"
+    scale 1.0
+    position x=1440 y=0
+    // variable-refresh-rate on-demand=true
+
+    hot-corners {
+        off
     }
+}
 
-    shadow {
-        on
-        softness 30
-        spread 5
-        offset x=0 y=5
-        color "#0007"
+// layout {
+//     gaps 8
+//     center-focused-column "never"
+//     preset-column-widths {
+//         proportion 0.33333
+//         proportion 0.5
+//         proportion 0.66667
+//     }
+//     default-column-width { proportion 0.5; }
+//     focus-ring {
+//         off
+//     }
+//
+//     border {
+//         on
+//         width 3
+//     }
+//
+//     shadow {
+//         on
+//         softness 30
+//         spread 5
+//         offset x=0 y=5
+//         color "#0007"
+//     }
+// }
+
+// cursor {
+//     xcursor-theme "catppuccin-mocha-dark-cursors"
+//     xcursor-size 24
+//     hide-when-typing
+//     hide-after-inactive-ms 1000
+// }
+
+overview {
+    zoom 0.5
+    backdrop-color "#1a1b26"
+
+    workspace-shadow {
+        // off
+        softness 40
+        spread 10
+        offset x=0 y=10
+        color "#00000050"
     }
 }
 
@@ -56,12 +101,63 @@ hotkey-overlay {
 }
 
 prefer-no-csd
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 screenshot-path "~/Imagens/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
     // off
     slowdown 3.0
+}
+
+workspace "󰖟" {
+  open-on-output "DP-1"
+}
+workspace "" {
+  open-on-output "DP-1"
+}
+workspace "" {
+  open-on-output "DP-1"
+}
+workspace "󰺷" {
+  open-on-output "DP-1"
+}
+workspace "󰪶" {
+  open-on-output "DP-1"
+}
+
+window-rule {
+    match app-id="firefox"
+    match app-id="chromium"
+    open-on-workspace "󰖟"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="Alacritty"
+    open-on-workspace ""
+}
+
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    open-on-workspace "󰪶"
+}
+
+window-rule {
+    match app-id="mpv"
+    open-on-workspace ""
+    open-maximized true
+}
+
+window-rule {
+  match app-id="gamescope"
+  open-on-output "DP-1"
+  open-fullscreen true
+}
+
+window-rule {
+  match app-id=r#"steam$"#
+  open-on-output "DP-1"
+  open-on-workspace "󰺷"
+  open-floating true
 }
 
 window-rule {
@@ -87,18 +183,13 @@ window-rule {
 
 window-rule {
     match app-id=r#"org.quickshell$"#
-    match app-id=r#"steam$"#
     match app-id="org.gnome.Calculator"
     match app-id="nwg-look"
     match app-id="pavucontrol"
+    match app-id="Pinentry-gtk"
     open-floating true
 }
 
-window-rule {
-  match app-id="gamescope"
-  open-on-output "DP-1"
-  open-fullscreen true
-}
 
 // Block out sensitive components from screencasts
 layer-rule {
@@ -131,20 +222,25 @@ binds {
 
   // Apps
   Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" {
-    spawn "alacritty"; 
+    spawn "alacritty";
   }
-  Mod+B hotkey-overlay-title="Open a Browser: chromium" { 
-    spawn "chromium"; 
+  Mod+B hotkey-overlay-title="Open a Browser: firefox" {
+    spawn "firefox";
   }
   Mod+D hotkey-overlay-title="Open D-Menu" {
-    spawn-sh "~/.local/bin/dmenus"; 
+    spawn-sh "~/.local/bin/dmenus";
   }
   Mod+E hotkey-overlay-title="Nautilus" {
     spawn "nautilus";
   }
+  Mod+Shift+Y hotkey-overlay-title="Youtube" {
+    spawn-sh ".local/bin/youtube.sh";
+  }
+  Mod+Alt+P hotkey-overlay-title="Passwords" {
+    spawn-sh ".local/bin/pass.sh";
+  }
 
   // DMS
-  // Application Launchers
   Mod+Space hotkey-overlay-title="Application Launcher" {
     spawn "dms" "ipc" "call" "spotlight" "toggle";
   }
@@ -171,14 +267,14 @@ binds {
   }
 
 
-  Mod+Alt+W hotkey-overlay-title="Random Wallpaper" { 
-    spawn "dms" "ipc" "call" "wallpaper" "next"; 
+  Mod+Alt+W hotkey-overlay-title="Random Wallpaper" {
+    spawn "dms" "ipc" "call" "wallpaper" "next";
   }
-  Mod+Alt+N hotkey-overlay-title="Notepad" { 
-    spawn "dms" "ipc" "call" "notepad" "toggle"; 
+  Mod+Alt+N hotkey-overlay-title="Notepad" {
+    spawn "dms" "ipc" "call" "notepad" "toggle";
   }
 
-  Mod+Ctrl+Alt+L hotkey-overlay-title="Lock Screen" {
+  Ctrl+Alt+L hotkey-overlay-title="Lock Screen" {
     spawn "dms" "ipc" "call" "lock" "lock";
   }
   Mod+Shift+N hotkey-overlay-title="Night mode" {
@@ -210,25 +306,25 @@ binds {
   Mod+O repeat=false { toggle-overview; }
   Mod+Q repeat=false { close-window; }
 
-  Mod+H       { focus-column-left; }
-  Mod+J       { focus-window-or-workspace-down; }
-  Mod+K       { focus-window-or-workspace-up; }
-  Mod+L       { focus-column-right; }
+  Mod+H          { focus-column-left; }
+  Mod+L          { focus-column-right; }
+  Mod+J          { focus-window-or-workspace-down; }
+  Mod+K          { focus-window-or-workspace-up; }
 
-  Mod+Ctrl+H  { move-column-left; }
-  Mod+Ctrl+L  { move-column-right; }
-  Mod+Ctrl+J  { move-window-down-or-to-workspace-down; }
-  Mod+Ctrl+K  { move-window-up-or-to-workspace-up; }
+  Mod+Ctrl+H     { move-column-left; }
+  Mod+Ctrl+L     { move-column-right; }
+  Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
+  Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
-  Mod+Alt+H   { focus-monitor-left; }
-  Mod+Alt+J   { focus-monitor-down; }
-  Mod+Alt+K   { focus-monitor-up; }
-  Mod+Alt+L   { focus-monitor-right; }
+  Mod+Alt+H      { focus-monitor-left; }
+  Mod+Alt+L      { focus-monitor-right; }
+  // Mod+Alt+J      { focus-monitor-down; }
+  // Mod+Alt+K      { focus-monitor-up; }
 
-  Mod+Shift+H { move-column-to-monitor-left; }
-  Mod+Shift+J { move-column-to-monitor-down; }
-  Mod+Shift+K { move-column-to-monitor-up; }
-  Mod+Shift+L { move-column-to-monitor-right; }
+  Mod+Ctrl+Alt+H { move-column-to-monitor-left; }
+  Mod+Ctrl+Alt+L { move-column-to-monitor-right; }
+  // Mod+Ctrl+Alt+J { move-column-to-monitor-down; }
+  // Mod+Ctrl+Alt+K { move-column-to-monitor-up; }
 
   // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
   // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
@@ -330,9 +426,6 @@ binds {
 }
 
 include "dms/colors.kdl"
-include "dms/binds.kdl"
 include "dms/wpblur.kdl"
 include "dms/cursor.kdl"
 include "dms/layout.kdl"
-
-include "dms/outputs.kdl"
