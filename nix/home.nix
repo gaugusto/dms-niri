@@ -6,6 +6,18 @@
 
   services.polkit-gnome.enable = true;
 
+  services.cliphist = {
+    enable = true;
+    systemdTargets = ["niri.service"];
+    extraOptions = [
+      "-max-dedupe-search"
+      "10"
+      "-max-items"
+      "500"
+    ];
+    allowImages = true;
+  };
+
   # programs.bash = {
   #   enable = true;
   #
@@ -60,6 +72,7 @@
     bat
     eza
     btop
+    walker
   ];
 
   home.pointerCursor = {
