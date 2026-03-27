@@ -8,6 +8,10 @@ include "dms/cursor.kdl"
 
 screenshot-path "~/Imagens/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
+hotkey-overlay {
+    skip-at-startup
+}
+
 input {
   keyboard {
     xkb {
