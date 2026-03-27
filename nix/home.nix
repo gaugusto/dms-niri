@@ -44,6 +44,7 @@
 
   home.file.".config/niri".source = ../niri/.config/niri;
   home.file.".config/alacritty".source = ../alacritty/.config/alacritty;
+  home.file.".config/vim".source = ../vim/.config/vim;
   home.file.".config/backgrounds".source = ../backgrounds/.config/backgrounds;
   home.file.".config/DankMaterialShell".source = ../dms/.config/DankMaterialShell;
   home.file.".config/mpv".source = ../mpv/.config/mpv;
@@ -58,6 +59,7 @@
     tree
     bat
     eza
+    btop
   ];
 
   home.pointerCursor = {

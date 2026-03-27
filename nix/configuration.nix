@@ -121,8 +121,8 @@
 
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim 
     wget
+    vim
     pass-wayland
     git
     htop
