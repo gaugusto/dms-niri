@@ -121,4 +121,8 @@ binds {
     spawn-sh ".local/bin/pass.sh";
   }
 
+  Mod+Alt+C hotkey-overlay-title="Clear cliphist" {
+    spawn "cliphist" "wipe" ;
+  }
+
 }
