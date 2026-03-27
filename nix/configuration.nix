@@ -24,6 +24,8 @@
     enable = true;
     extraPackages = with pkgs; [
       intel-media-driver 
+      vpl-gpu-rt
+      intel-compute-runtime
     ];
   };
 
@@ -122,6 +124,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     wget
+    mpv
+    yt-dlp
     vim
     pass-wayland
     git
