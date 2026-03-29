@@ -1,12 +1,12 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
-  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/catppuccin/theme.json",
+  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/tokyoNightNightMoon/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
       "dark": {
         "flavor": "mocha",
-        "accent": "mauve"
+        "accent": "blue"
       }
     }
   },
@@ -14,7 +14,7 @@
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
   "popupTransparency": 1,
-  "dockTransparency": 1,
+  "dockTransparency": 0.75,
   "widgetBackgroundColor": "sth",
   "widgetColorMode": "default",
   "controlCenterTileColorMode": "primary",
@@ -317,23 +317,23 @@
   "matugenTemplateEmacs": false,
   "matugenTemplateZed": true,
   "showDock": false,
-  "dockAutoHide": false,
+  "dockAutoHide": true,
   "dockSmartAutoHide": false,
   "dockGroupByApp": false,
   "dockOpenOnOverview": false,
   "dockPosition": 1,
-  "dockSpacing": 4,
+  "dockSpacing": 8,
   "dockBottomGap": 0,
-  "dockMargin": 0,
-  "dockIconSize": 40,
-  "dockIndicatorStyle": "circle",
-  "dockBorderEnabled": false,
+  "dockMargin": 15,
+  "dockIconSize": 60,
+  "dockIndicatorStyle": "line",
+  "dockBorderEnabled": true,
   "dockBorderColor": "surfaceText",
   "dockBorderOpacity": 1,
   "dockBorderThickness": 1,
   "dockIsolateDisplays": false,
-  "dockLauncherEnabled": false,
-  "dockLauncherLogoMode": "apps",
+  "dockLauncherEnabled": true,
+  "dockLauncherLogoMode": "compositor",
   "dockLauncherLogoCustomPath": "",
   "dockLauncherLogoColorOverride": "",
   "dockLauncherLogoSizeOffset": 0,
@@ -460,13 +460,38 @@
         "weather"
       ],
       "rightWidgets": [
-        "systemTray",
-        "clipboard",
-        "cpuUsage",
-        "memUsage",
-        "notificationButton",
-        "battery",
-        "controlCenterButton"
+        {
+          "id": "idleInhibitor",
+          "enabled": true
+        },
+        {
+          "id": "systemTray",
+          "enabled": true
+        },
+        {
+          "id": "clipboard",
+          "enabled": true
+        },
+        {
+          "id": "cpuUsage",
+          "enabled": true
+        },
+        {
+          "id": "memUsage",
+          "enabled": true
+        },
+        {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "battery",
+          "enabled": true
+        },
+        {
+          "id": "controlCenterButton",
+          "enabled": true
+        }
       ],
       "spacing": 5,
       "innerPadding": 5,
