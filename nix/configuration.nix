@@ -4,19 +4,33 @@
       /etc/nixos/hardware-configuration.nix
     ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.configurationLimit = 5;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.systemd.enable = true;
-
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    plymouth = {
+      enable = true;
+      theme = "rings";
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "rings" ];
+        })
+      ];
+    };
+
+    consoleLogLevel = 3;
     kernelParams = [
       "quiet"
-      "splash"
-      "transparent_hugepage=always"
-      "preempt=full"
+      "udev.log_level=3"
+      "systemd.show_status=auto"
     ];
+
+    initrd.luks.devices."luks-381fe8e7-c546-4bab-abe6-b9deb2c22b53".device = "/dev/disk/by-uuid/381fe8e7-c546-4bab-abe6-b9deb2c22b53";
+
+    loader.timeout = 0;
+    loader.systemd-boot.enable = true;
+    loader.systemd-boot.configurationLimit = 5;
+    loader.efi.canTouchEfiVariables = true;
+ 
+    initrd.verbose = false;
+    initrd.systemd.enable = true;
   };
 
   hardware.bluetooth.enable = true;
@@ -146,6 +160,7 @@
     xdg-user-dirs
     nwg-look
     adw-gtk3
+    gnome-calculator
   ];
 
   xdg.portal.config.niri = {
