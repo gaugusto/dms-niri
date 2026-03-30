@@ -15,13 +15,13 @@
   "matugenTargetMonitor": "",
   "popupTransparency": 1,
   "dockTransparency": 0.75,
-  "widgetBackgroundColor": "sth",
+  "widgetBackgroundColor": "sch",
   "widgetColorMode": "default",
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
-  "cornerRadius": 12,
+  "cornerRadius": 8,
   "niriLayoutGapsOverride": 8,
-  "niriLayoutRadiusOverride": 12,
+  "niriLayoutRadiusOverride": 8,
   "niriLayoutBorderSize": 3,
   "hyprlandLayoutGapsOverride": -1,
   "hyprlandLayoutRadiusOverride": -1,
@@ -232,8 +232,8 @@
     "theme": "catppuccin-mocha-dark-cursors",
     "size": 24,
     "niri": {
-      "hideWhenTyping": false,
-      "hideAfterInactiveMs": 0
+      "hideWhenTyping": true,
+      "hideAfterInactiveMs": 1004
     },
     "hyprland": {
       "hideOnKeyPress": false,
@@ -421,14 +421,14 @@
       "layout": {
         "alwaysCenterSingleColumn": true
       },
-      "focusAtStartup": true,
+      "focusAtStartup": false,
       "vrrOnDemand": true
     },
     "DP-2": {
       "hotCorners": {
         "off": true
       },
-      "focusAtStartup": false,
+      "focusAtStartup": true,
       "layout": {
         "alwaysCenterSingleColumn": true
       },
@@ -493,8 +493,8 @@
           "enabled": true
         }
       ],
-      "spacing": 5,
-      "innerPadding": 5,
+      "spacing": 8,
+      "innerPadding": 8,
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 1,
@@ -514,8 +514,11 @@
       "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
-      "widgetPadding": 12,
-      "iconScale": 1.1
+      "widgetPadding": 15,
+      "iconScale": 1.1,
+      "maximizeWidgetIcons": false,
+      "maximizeWidgetText": false,
+      "removeWidgetPadding": false
     }
   ],
   "desktopClockEnabled": false,
