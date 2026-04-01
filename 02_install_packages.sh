@@ -4,46 +4,38 @@
 set -e
 
 PACKAGES=(
-  adw-gtk-theme
-  amd-ucode
-  archlinux-wallpaper
-  base
-  bat
-  bluez-utils
-  cantarell-fonts
-  chromium
-  cups
-  dms-shell-bin
-  edk2-shell
-  efibootmgr
-  eza
-  flatpak
-  fzf
-  gamemode
-  gamescope
-  helvum
-  lazygit
-  linux-zen
-  networkmanager
-  nim
-  nvidia-open-dkms
-  nwg-look
-  pass
-  pavucontrol
-  plymouth
-  polkit-gnome
-  rofi
-  sbctl
-  steam
-  stow
-  swayidle
-  system-config-printer
-  timeshift
-  ttf-jetbrains-mono-nerd
-  wget
-  yay
-  yay-debug
-  zram-generator
+adw-gtk-theme
+base
+bat
+bluez-utils
+bob
+catppuccin-cursors-mocha
+cliphist
+cups
+dms-shell-bin
+efibootmgr
+eza
+firefox
+fzf
+greetd-dms-greeter-git
+intel-ucode
+lazygit
+limine
+linux-zen
+mpv
+nwg-look
+pavucontrol
+plymouth
+polkit-gnome
+snapper
+sof-firmware
+stow
+system-config-printer
+ttf-jetbrains-mono-nerd
+walker
+yay
+yay-debug
+zram-generator
 )
 
 sudo pacman -Syy
