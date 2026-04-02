@@ -1,12 +1,12 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
-  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/tokyoNightNightMoon/theme.json",
+  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/catppuccin/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
       "dark": {
         "flavor": "mocha",
-        "accent": "blue"
+        "accent": "pink"
       }
     }
   },
@@ -137,7 +137,7 @@
   "dwlShowAllTags": false,
   "workspaceColorMode": "default",
   "workspaceOccupiedColorMode": "none",
-  "workspaceUnfocusedColorMode": "default",
+  "workspaceUnfocusedColorMode": "sch",
   "workspaceUrgentColorMode": "default",
   "workspaceFocusedBorderEnabled": false,
   "workspaceFocusedBorderColor": "primary",
@@ -455,7 +455,11 @@
         "workspaceSwitcher"
       ],
       "centerWidgets": [
-        "music",
+        {
+          "id": "music",
+          "enabled": true,
+          "mediaSize": 3
+        },
         "clock",
         "weather"
       ],
