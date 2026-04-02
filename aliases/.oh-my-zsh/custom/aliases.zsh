@@ -7,3 +7,5 @@ alias pinstall="pacman -Sl | awk '{print \$2}' | fzf -m --preview 'pacman -Si {}
 alias puninstall="pacman -Qq | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman -Rsc"
 
 alias me-btw="figlet GAugusto"
+
+alias ls="eza -lah --group-directories-first --icons=always"
