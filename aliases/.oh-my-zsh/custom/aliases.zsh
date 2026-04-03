@@ -8,4 +8,4 @@ alias puninstall="pacman -Qq | fzf -m --preview 'pacman -Si {}' --layout=reverse
 
 alias me-btw="figlet GAugusto"
 
-alias ls="eza -lah --group-directories-first --icons=always"
+alias ls="eza -lh --group-directories-first --icons=always"

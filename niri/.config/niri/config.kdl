@@ -91,6 +91,7 @@ window-rule {
   match app-id="org.gnome.Nautilus"
   match app-id="nwg-look"
   match app-id="Pinentry-gtk"
+  match app-id="qemu"
   open-floating true
 }
 
