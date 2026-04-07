@@ -7,7 +7,7 @@ if ! command -v cliphist &> /dev/null || ! command -v walker &> /dev/null; then
 fi
 
 # 2. Obtém a lista de links (Removendo duplicatas com uniq)
-LINKS=$(cliphist list | awk '$2 ~ /youtube\.com|youtu\.be/ {print $2}' | uniq)
+LINKS=$(cliphist list | awk '$2 ~ /youtube\.com|youtu\.be|twitch\.tv/ {print $2}' | uniq)
 
 # 3. Verifica se a lista está vazia
 if [ -z "$LINKS" ]; then

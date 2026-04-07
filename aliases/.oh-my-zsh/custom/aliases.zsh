@@ -1,5 +1,3 @@
-alias nvim='bob run nightly'
-
 alias fzf='fzf --height 80% --layout reverse --border'
 
 alias pinfo="pacman -Qq | fzf --preview 'pacman -Qi {}'"

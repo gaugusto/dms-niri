@@ -80,7 +80,7 @@ binds {
     Mod+Down { focus-window-down; }
     Mod+End { focus-column-last; }
     Mod+Equal { set-column-width "+10%"; }
-    Mod+F { maximize-column; }
+    Mod+Alt+F { maximize-column; }
     Mod+H { focus-column-left; }
     Mod+Home { focus-column-first; }
     Mod+J { focus-window-or-workspace-down; }
