@@ -15,7 +15,7 @@ if [ -z "$LINKS" ]; then
   exit 1
 fi
 
-# 4. Abre o Rofi para seleção
+# 4. Abre o Walker para seleção
 ESCOLHA=$(echo "$LINKS" | walker -d)
 
 # 5. Se o usuário não cancelou (Esc), executa o MPV
