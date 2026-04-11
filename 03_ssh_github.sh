@@ -5,7 +5,7 @@ if [ "$#" -ne 1 ]; then
   exit 1
 fi
 
-ssh-keygen -t ed25519 -C "$1" 
+ssh-keygen -t ed25519 -C "$1"
 
 eval "$(ssh-agent -s)"
 

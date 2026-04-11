@@ -5,26 +5,17 @@ set -e
 
 PACKAGES=(
   adw-gtk-theme
-  base
   bat
   bluez-utils
-  bob
   catppuccin-cursors-mocha
   clang
   cliphist
-  cups
-  dms-shell-bin
-  efibootmgr
   eza
   fd
   firefox
+  chromium
   fzf
-  greetd-dms-greeter-git
-  intel-ucode
   lazygit
-  libva-utils
-  limine
-  linux-zen
   lua-argparse
   lua-jsregexp
   luarocks
@@ -40,9 +31,7 @@ PACKAGES=(
   system-config-printer
   tree
   ttf-jetbrains-mono-nerd
-  walker
-  yay
-  yay-debug
+  walker-bin
   zram-generator
 )
 

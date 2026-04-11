@@ -1,12 +1,12 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
-  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/tokyoNightNightMoon/theme.json",
+  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/catppuccin/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
       "dark": {
         "flavor": "mocha",
-        "accent": "lavender"
+        "accent": "red"
       }
     }
   },

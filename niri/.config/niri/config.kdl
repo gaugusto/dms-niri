@@ -7,6 +7,7 @@ include "dms/outputs.kdl"
 include "dms/cursor.kdl"
 
 screenshot-path "~/Imagens/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 hotkey-overlay {
     skip-at-startup
@@ -24,7 +25,7 @@ input {
   touchpad {
     tap
   }
-  warp-mouse-to-focus
+  // warp-mouse-to-focus
   focus-follows-mouse max-scroll-amount="0%"
 }
 
@@ -92,6 +93,7 @@ window-rule {
   match app-id="nwg-look"
   match app-id="Pinentry-gtk"
   match app-id="qemu"
+  match app-id="mpv"
   open-floating true
 }
 
