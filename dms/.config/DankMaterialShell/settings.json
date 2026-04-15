@@ -229,7 +229,7 @@
   "networkPreference": "ethernet",
   "iconTheme": "System Default",
   "cursorSettings": {
-    "theme": "catppuccin-mocha-dark-cursors",
+    "theme": "Bibata-Modern-Classic",
     "size": 24,
     "niri": {
       "hideWhenTyping": true,

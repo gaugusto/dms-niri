@@ -43,16 +43,16 @@ overview {
 }
 
 workspace "󰖟" {
-  open-on-output "DP-2"
+  open-on-output "DP-3"
 }
 workspace "" {
-  open-on-output "DP-2"
+  open-on-output "DP-3"
 }
 workspace "" {
-  open-on-output "DP-1"
+  open-on-output "DP-2"
 }
 workspace "󰺷" {
-  open-on-output "DP-1"
+  open-on-output "DP-2"
 }
 
 window-rule {
@@ -75,13 +75,12 @@ window-rule {
 
 window-rule {
   match app-id="gamescope"
-  open-on-output "DP-1"
+  open-on-workspace "󰺷"
   open-fullscreen true
 }
 
 window-rule {
   match app-id=r#"steam$"#
-  open-on-output "DP-1"
   open-on-workspace "󰺷"
   open-floating true
 }
@@ -95,6 +94,11 @@ window-rule {
   match app-id="qemu"
   match app-id="mpv"
   open-floating true
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
 binds {

@@ -14,7 +14,7 @@ output "DP-1" {
 }
 
 output "DP-2" {
-    mode "3440x1440@159.962"
+    mode "3440x1440@180.000"
     scale 1
     position x=3440 y=0
     variable-refresh-rate on-demand=true
@@ -25,5 +25,11 @@ output "DP-2" {
     layout {
         always-center-single-column
     }
+}
+
+output "DP-3" {
+    mode "3440x1440@159.962"
+    scale 1
+    position x=6880 y=0
 }
 
