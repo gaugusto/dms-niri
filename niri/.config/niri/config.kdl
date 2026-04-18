@@ -88,10 +88,7 @@ window-rule {
 window-rule {
   match app-id=r#"org.quickshell$"#
   match app-id="org.gnome.Calculator"
-  match app-id="org.gnome.Nautilus"
-  match app-id="nwg-look"
   match app-id="Pinentry-gtk"
-  match app-id="qemu"
   match app-id="mpv"
   open-floating true
 }
@@ -127,4 +124,7 @@ binds {
     spawn "cliphist" "wipe" ;
   }
 
+  Mod+P hotkey-overlay-title="Color Picker" {
+    spawn "dms" "color" "pick" "-a";
+  }
 }
