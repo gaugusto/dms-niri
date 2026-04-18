@@ -1,16 +1,22 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
-  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/catppuccin/theme.json",
+  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/myTokyoNight/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
       "dark": {
         "flavor": "mocha",
-        "accent": "red"
+        "accent": "sapphire"
+      }
+    },
+    "gruvboxMulti": {
+      "dark": {
+        "flavor": "material-hard-dark",
+        "accent": "green"
       }
     }
   },
-  "matugenScheme": "scheme-tonal-spot",
+  "matugenScheme": "scheme-rainbow",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
   "popupTransparency": 1,
@@ -229,7 +235,7 @@
   "networkPreference": "ethernet",
   "iconTheme": "System Default",
   "cursorSettings": {
-    "theme": "Bibata-Modern-Classic",
+    "theme": "catppuccin-mocha-dark-cursors",
     "size": 24,
     "niri": {
       "hideWhenTyping": true,
@@ -431,8 +437,12 @@
       "focusAtStartup": true,
       "layout": {
         "alwaysCenterSingleColumn": true
-      },
-      "vrrOnDemand": true
+      }
+    },
+    "DP-3": {
+      "hotCorners": {
+        "off": true
+      }
     }
   },
   "hyprlandOutputSettings": {},
