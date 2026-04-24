@@ -28,7 +28,7 @@
   "cornerRadius": 8,
   "niriLayoutGapsOverride": 8,
   "niriLayoutRadiusOverride": 8,
-  "niriLayoutBorderSize": 3,
+  "niriLayoutBorderSize": 2,
   "hyprlandLayoutGapsOverride": -1,
   "hyprlandLayoutRadiusOverride": -1,
   "hyprlandLayoutBorderSize": -1,
@@ -43,7 +43,7 @@
   "nightModeEnabled": false,
   "animationSpeed": 4,
   "customAnimationDuration": 200,
-  "syncComponentAnimationSpeeds": true,
+  "syncComponentAnimationSpeeds": false,
   "popoutAnimationSpeed": 4,
   "popoutCustomAnimationDuration": 150,
   "modalAnimationSpeed": 1,
@@ -239,7 +239,7 @@
     "size": 24,
     "niri": {
       "hideWhenTyping": true,
-      "hideAfterInactiveMs": 1004
+      "hideAfterInactiveMs": 0
     },
     "hyprland": {
       "hideOnKeyPress": false,
