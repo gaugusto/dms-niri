@@ -529,7 +529,7 @@
       "borderOpacity": 1,
       "borderThickness": 1,
       "fontScale": 1,
-      "autoHide": false,
+      "autoHide": true,
       "autoHideDelay": 250,
       "openOnOverview": false,
       "visible": true,
@@ -539,7 +539,8 @@
       "iconScale": 1.1,
       "maximizeWidgetIcons": false,
       "maximizeWidgetText": false,
-      "removeWidgetPadding": false
+      "removeWidgetPadding": false,
+      "showOnWindowsOpen": true
     }
   ],
   "desktopClockEnabled": false,
