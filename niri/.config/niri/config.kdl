@@ -58,6 +58,7 @@ workspace "󰺷" {
 window-rule {
     match app-id="firefox"
     match app-id="chromium"
+    match app-id="brave-origin-beta"
     match app-id="org.qutebrowser.qutebrowser"
     open-on-workspace "󰖟"
 }
@@ -113,8 +114,8 @@ binds {
     spawn-sh "~/.local/bin/dmenus";
   }
 
-  Mod+Alt+Y hotkey-overlay-title="Youtube" {
-    spawn-sh ".local/bin/youtube.sh";
+  Mod+Alt+Y hotkey-overlay-title="Watch videos" {
+    spawn-sh ".local/bin/watch.sh";
   }
 
   Mod+Alt+P hotkey-overlay-title="Passwords" {
