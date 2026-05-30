@@ -102,8 +102,8 @@ window-rule {
 
 binds {
 
-  Mod+B hotkey-overlay-title="Open a Browser: firefox" {
-    spawn "firefox";
+  Mod+B hotkey-overlay-title="Open a Browser: brave-origin-beta" {
+    spawn "brave-origin-beta";
   }
 
   Mod+E hotkey-overlay-title="Nautilus" {
