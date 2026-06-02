@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 
-# 1. Verifica dependências
-if ! command -v cliphist &> /dev/null || ! command -v walker &> /dev/null; then
-  notify-send "Erro" "cliphist ou walker não estão instalados."
-  exit 1
-fi
-
 # 2. Obtém a lista de links (Removendo duplicatas com uniq)
-LINKS=$(cliphist list | awk '$2 ~ /youtube\.com|youtu\.be|twitch\.tv|kick.com/ {print $2}' | uniq)
+LINKS=$(dms cl history --json | jq -r '.[] | select(.preview | test("youtube\\.com|twitch\\.tv"; "i")) | .preview' | uniq)
 
 # 3. Verifica se a lista está vazia
 if [ -z "$LINKS" ]; then
