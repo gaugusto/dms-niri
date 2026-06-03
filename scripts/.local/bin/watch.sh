@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # 2. Obtém a lista de links (Removendo duplicatas com uniq)
-LINKS=$(dms cl history --json | jq -r '.[] | select(.preview | test("youtube\\.com|twitch\\.tv"; "i")) | .preview' | uniq)
+LINKS=$(dms cl history --json | jq -r '.[] | select(.preview | test("youtube\\.com|twitch\\.tv|youtu\\.be|kick\\.com"; "i")) | .preview' | uniq)
 
 # 3. Verifica se a lista está vazia
 if [ -z "$LINKS" ]; then
