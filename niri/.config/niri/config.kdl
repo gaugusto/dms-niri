@@ -296,6 +296,10 @@ binds {
   Mod+Ctrl+P hotkey-overlay-title="Color Picker" {
     spawn "dms" "color" "pick" "-a";
   }
+
+  Mod+Ctrl+G hotkey-overlay-title="Camera da Garagem" {
+    spawn "mpv" "rtsp://garagem:Egmdc89567@192.168.15.16:554/stream1";
+  }
 }
 
 // Include dms files
