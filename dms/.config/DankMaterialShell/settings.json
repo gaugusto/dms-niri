@@ -357,12 +357,12 @@
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
   "muteSoundsWhenMediaPlaying": true,
-  "acMonitorTimeout": 0,
-  "acLockTimeout": 0,
+  "acMonitorTimeout": 600,
+  "acLockTimeout": 300,
   "acSuspendTimeout": 0,
   "acSuspendBehavior": 0,
   "acProfileName": "",
-  "acPostLockMonitorTimeout": 0,
+  "acPostLockMonitorTimeout": 60,
   "batteryMonitorTimeout": 0,
   "batteryLockTimeout": 0,
   "batterySuspendTimeout": 0,
@@ -714,7 +714,14 @@
   "desktopWidgetGridSettings": {},
   "desktopWidgetInstances": [],
   "desktopWidgetGroups": [],
-  "builtInPluginSettings": {},
+  "builtInPluginSettings": {
+    "dms_settings_search": {
+      "trigger": "?"
+    },
+    "dms_clipboard_search": {
+      "trigger": "cb"
+    }
+  },
   "clipboardClickToPaste": false,
   "clipboardEnterToPaste": false,
   "clipboardRememberTypeFilter": false,
