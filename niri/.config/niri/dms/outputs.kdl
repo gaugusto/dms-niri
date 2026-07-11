@@ -4,7 +4,6 @@ output "Technical Concepts Ltd 34R83Q 942300A590A" {
     mode "3440x1440@180.000"
     scale 1
     position x=0 y=0
-    variable-refresh-rate on-demand=true
     focus-at-startup
     hot-corners {
         off
