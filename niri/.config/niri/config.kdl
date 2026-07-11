@@ -248,6 +248,12 @@ window-rule {
     match app-id="com.mitchellh.ghostty"
     match app-id="kitty"
     draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 3
+    }
 }
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
