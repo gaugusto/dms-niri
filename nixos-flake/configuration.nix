@@ -15,6 +15,13 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+    ];
+  };
+
   networking.hostName = "nixos-btw";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -120,17 +127,11 @@
 
   environment.sessionVariables = {
     DRI_PRIME = "1";
+    LIBVA_DRIVER_NAME = "iHD";
   };
 
   environment.systemPackages = with pkgs; [
-    (chromium.override {
-      enableWideVine = true;
-      commandLineArgs = [
-	"--enable-features=VaapiVideoDecoder,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE"
-        "--ignore-gpu-blocklist"
-        "--enable-zero-copy"
-      ];
-    })
+    qutebrowser
     neovim
     fastfetch
     wget
@@ -158,6 +159,7 @@
     gnome-calculator
     stow
     lazygit
+    rofi
   ];
 
   fonts.packages = with pkgs; [
