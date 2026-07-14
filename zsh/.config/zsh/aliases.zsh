@@ -59,3 +59,7 @@ alias pacman-uninstall="pacman -Qq | fzf -m --preview 'pacman -Si {}' --layout=r
 # =========================================================
 alias yt-dlp='yt-dlp --cookies-from-browser brave+gnomekeyring:~/.config/BraveSoftware/Brave-Origin-Beta/'
 
+# =========================================================
+# Run0 
+# =========================================================
+alias sudo='run0'
