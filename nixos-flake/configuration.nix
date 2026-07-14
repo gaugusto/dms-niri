@@ -24,6 +24,7 @@
 
   hardware.nvidia.prime = {
     offload.enable = true;
+
     intelBusId = "PCI:0@0:2:0";
     nvidiaBusId = "PCI:1@0:0:0";
   };
@@ -63,10 +64,10 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  services.xserver.videoDrivers = [
-    "modesetting"
-    "nvidia"
-  ];
+  # services.xserver.videoDrivers = [
+  #   "modesetting"
+  #   "nvidia"
+  # ];
 
   # Configure keymap in X11
   services.xserver.xkb = {
