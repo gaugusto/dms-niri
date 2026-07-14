@@ -22,6 +22,12 @@
     ];
   };
 
+  hardware.nvidia.prime = {
+    offload.enable = true;
+    intelBusId = "PCI:0@0:2:0";
+    nvidiaBusId = "PCI:1@0:0:0";
+  };
+
   networking.hostName = "nixos-btw";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -56,6 +62,11 @@
     LC_TELEPHONE = "pt_BR.UTF-8";
     LC_TIME = "pt_BR.UTF-8";
   };
+
+  services.xserver.videoDrivers = [
+    "modesetting"
+    "nvidia"
+  ];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -126,7 +137,6 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables = {
-    DRI_PRIME = "1";
     LIBVA_DRIVER_NAME = "iHD";
   };
 
