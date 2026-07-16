@@ -1,62 +1,65 @@
--- ============================================================================
--- KEYMAPS
--- ============================================================================
-vim.g.mapleader = " " -- space for leader
-vim.g.maplocalleader = " " -- space for localleader
+-- KEYBINDS
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
--- File explorer
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Abrir explorador de arquivos" })
-
--- better movement in wrapped text
-vim.keymap.set("n", "j", function()
-	return vim.v.count == 0 and "gj" or "j"
-end, { expr = true, silent = true, desc = "Down (wrap-aware)" })
-vim.keymap.set("n", "k", function()
-	return vim.v.count == 0 and "gk" or "k"
-end, { expr = true, silent = true, desc = "Up (wrap-aware)" })
-
-vim.keymap.set("n", "<leader>c", ":nohlsearch<CR>", { desc = "Clear search highlights" })
-
-vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
-vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
-
-vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Paste without yanking" })
-vim.keymap.set({ "n", "v" }, "<leader>x", '"_d', { desc = "Delete without yanking" })
-
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
-
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
-
-vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
-vim.keymap.set("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
-vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", { desc = "Increase window height" })
-vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { desc = "Decrease window height" })
-vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Decrease window width" })
-vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Increase window width" })
-
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
-
-vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
-vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
-
-vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
-
-vim.keymap.set("n", "<leader>pa", function() -- show file path
-	local path = vim.fn.expand("%:p")
-	vim.fn.setreg("+", path)
-	print("file:", path)
-end, { desc = "Copy full file path" })
-
-vim.keymap.set("n", "<leader>td", function()
-	vim.diagnostic.enable(not vim.diagnostic.is_enabled())
-end, { desc = "Toggle diagnostics" })
-
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Alt Up/Down in vscode
+-- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+--
+-- vim.keymap.set("n", "J", "mzJ`z")       -- Remap joining lines
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Keep cursor in place while moving up/down page
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-- vim.keymap.set("n", "n", "nzzzv")       -- center screen when looping search results
+-- vim.keymap.set("n", "N", "Nzzzv")
+--
+-- -- paste and don't replace clipboard over deleted text
+-- vim.keymap.set("x", "<leader>p", [["_dP]])
+-- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+--
+--
+-- -- sometimes in insert mode, control-c doesn't exactly work like escape
+-- vim.keymap.set("i", "<C-c>", "<Esc>")
+--
+-- -- add binds for Control J/K to scroll thru quickfix list
+-- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
+-- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
+--
+-- -- What the heck is Ex mode?
+-- vim.keymap.set("n", "Q", "<nop>")
+--
+-- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+-- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+--
+--
+-- -- lint / format php files for LC
+-- vim.keymap.set("n", "<leader>cc", "<cmd>!php-cs-fixer fix % --using-cache=no<cr>")
+--
+-- -- Replace all instances of whatever is under cursor (on line)
+-- vim.keymap.set("n", "<leader>s", [[:s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
+--
+-- -- make file executable
+-- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+--
+-- -- yank into clipboard even if on ssh
+-- vim.keymap.set('n', '<leader>y', '<Plug>OSCYankOperator')
+-- vim.keymap.set('v', '<leader>y', '<Plug>OSCYankVisual')
+--
+-- -- reload without exiting vim
+-- vim.keymap.set("n", "<leader>rl", "<cmd>source ~/.config/nvim/init.lua<cr>")
+--
+-- vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+--
+-- -- Quickfix list stuff
+-- vim.keymap.set("n", "<leader>cl", ":cclose<CR>", { silent = true })
+-- vim.keymap.set("n", "<leader>co", ":copen<CR>", { silent = true })
+-- vim.keymap.set("n", "<leader>cn", ":cnext<CR>zz")
+-- vim.keymap.set("n", "<leader>cp", ":cprev<CR>zz")
+-- vim.keymap.set("n", "<leader>li", ":checkhealth vim.lsp<CR>", { desc = "LSP Info" })
+--
+-- -- run make in current working directory
+-- vim.keymap.set("n", "<leader>mm", "<cmd>make<CR>")
+--
+-- -- source file
+-- vim.keymap.set("n", "<leader><leader>", function()
+--     vim.cmd("so")
+-- end)
+--
