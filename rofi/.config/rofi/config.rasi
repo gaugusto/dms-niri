@@ -1,0 +1,13 @@
+configuration {
+    // 1. Limpa os mapeamentos originais que estão gerando conflito
+    kb-accept-entry: "Return,KP_Enter"; // Remove o Control+j original daqui
+    kb-remove-to-eol: "";               // Remove o Control+k original daqui
+
+    // 2. Aplica os novos atalhos para navegação estilo Vim
+    kb-row-up: "Up,Control+k";
+    kb-row-down: "Down,Control+j";
+}
+
+//@theme "/home/gaugusto/.local/share/rofi/themes/meu_thema.rasi"
+
+@theme "/home/gaugusto/.local/share/rofi/themes/tokyonight.rasi"
