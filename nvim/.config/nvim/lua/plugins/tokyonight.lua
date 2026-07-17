@@ -2,7 +2,7 @@ return {
   "https://github.com/folke/tokyonight.nvim",
   config = function()
     require("tokyonight").setup({
-      style = "storm",
+      style = "night",
       transparent = false,
       styles = {
         comments = { italic = true },
