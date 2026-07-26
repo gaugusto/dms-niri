@@ -1,4 +1,4 @@
 let mapleader = " "
 
-nnoremap <leader>cd : Ex<CR>
+nnoremap <leader>e : Ex<CR>
 
