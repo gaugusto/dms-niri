@@ -575,14 +575,7 @@
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
-  "connectedFrameBarStyleBackups": {
-    "default": {
-      "shadowIntensity": 0,
-      "squareCorners": true,
-      "gothCornersEnabled": true,
-      "borderEnabled": false
-    }
-  },
+  "connectedFrameBarStyleBackups": {},
   "barConfigs": [
     {
       "id": "default",
@@ -597,24 +590,27 @@
         "workspaceSwitcher"
       ],
       "centerWidgets": [
-        "music",
         "clock",
         "weather"
       ],
       "rightWidgets": [
+        {
+          "id": "music",
+          "enabled": true
+        },
         "systemTray",
         "clipboard",
         "cpuUsage",
         "memUsage",
-        "notificationButton",
         "battery",
-        "controlCenterButton"
+        "controlCenterButton",
+        "notificationButton"
       ],
-      "spacing": 0,
+      "spacing": 4,
       "innerPadding": 4,
       "barInsetPadding": 4,
       "bottomGap": 0,
-      "transparency": 1,
+      "transparency": 0.5,
       "widgetTransparency": 1,
       "squareCorners": false,
       "noBackground": true,
@@ -747,7 +743,7 @@
   ],
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
-  "frameEnabled": true,
+  "frameEnabled": false,
   "frameThickness": 6,
   "frameRounding": 12,
   "frameColor": "",
