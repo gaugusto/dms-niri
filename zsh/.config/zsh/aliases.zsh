@@ -31,12 +31,6 @@ alias df='df -h'
 alias -- -='cd -'  # -- prevents - being parsed as a flag; cd - jumps to previous directory
 
 # =========================================================
-# Editor
-# =========================================================
-
-alias vim='nvim'
-
-# =========================================================
 # Git
 # =========================================================
 
@@ -49,17 +43,17 @@ alias gadog='PAGER="less -F -X" git log --all --decorate --oneline --graph'
 # =========================================================
 
 alias fzf='fzf --height 80% --layout reverse --border'
-alias pacman-info="pacman -Qq | fzf --preview 'pacman -Qi {}'"
-alias pacman-install="pacman -Sl | awk '{print \$2}' | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman --needed -S"
-alias yay-install="yay -Sl | awk '{print \$2}' | fzf -m --preview 'yay -Si {}' --layout=reverse | xargs -ro yay --needed -S"
-alias pacman-uninstall="pacman -Qq | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman -Rsc"
+alias pinfo="pacman -Qq | fzf --preview 'pacman -Qi {}'"
+alias pinstall="pacman -Sl | awk '{print \$2}' | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman --needed -S"
+alias yinstall="yay -Sl | awk '{print \$2}' | fzf -m --preview 'yay -Si {}' --layout=reverse | xargs -ro yay --needed -S"
+alias puninstall="pacman -Qq | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman -Rsc"
 
 # =========================================================
 # Yt-dlp
 # =========================================================
-alias yt-dlp='yt-dlp --cookies-from-browser brave+gnomekeyring:~/.config/BraveSoftware/Brave-Origin-Beta/'
+alias yt-dlp='yt-dlp --cookies-from-browser brave+gnomekeyring:~/.config/BraveSoftware/Brave-Origin/'
 
 # =========================================================
 # Run0 
 # =========================================================
-alias sudo='run0'
+alias sudo='run0 --background="48;2;65;72;104"'

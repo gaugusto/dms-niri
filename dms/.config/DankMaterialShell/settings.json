@@ -575,7 +575,14 @@
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
-  "connectedFrameBarStyleBackups": {},
+  "connectedFrameBarStyleBackups": {
+    "default": {
+      "shadowIntensity": 0,
+      "squareCorners": true,
+      "gothCornersEnabled": true,
+      "borderEnabled": false
+    }
+  },
   "barConfigs": [
     {
       "id": "default",
@@ -603,14 +610,14 @@
         "battery",
         "controlCenterButton"
       ],
-      "spacing": 4,
+      "spacing": 0,
       "innerPadding": 4,
-      "barInsetPadding": -1,
+      "barInsetPadding": 4,
       "bottomGap": 0,
-      "transparency": 0.5,
+      "transparency": 1,
       "widgetTransparency": 1,
       "squareCorners": false,
-      "noBackground": false,
+      "noBackground": true,
       "maximizeWidgetIcons": false,
       "maximizeWidgetText": false,
       "removeWidgetPadding": false,
@@ -636,8 +643,8 @@
       "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
-      "maximizeDetection": true,
-      "useOverlayLayer": false,
+      "maximizeDetection": false,
+      "useOverlayLayer": true,
       "scrollEnabled": true,
       "scrollXBehavior": "column",
       "scrollYBehavior": "workspace",
@@ -740,7 +747,7 @@
   ],
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
-  "frameEnabled": false,
+  "frameEnabled": true,
   "frameThickness": 6,
   "frameRounding": 12,
   "frameColor": "",
