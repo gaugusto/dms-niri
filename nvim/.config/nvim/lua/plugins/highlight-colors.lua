@@ -17,7 +17,7 @@ return {
 
       -- Habilita o realce de cores no formato CSS (ex: rgb, hsl, etc.)
       enable_css_variables = true,
-      
+
       -- Exclui tipos de arquivo onde você não quer que as cores fiquem piscando na tela
       exclude_filetypes = { "lazy", "mason", "help" },
     })
