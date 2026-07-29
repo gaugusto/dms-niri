@@ -310,7 +310,7 @@
   "iconThemePerMode": false,
   "lastAppliedIconTheme": "",
   "cursorSettings": {
-    "theme": "catppuccin-mocha-dark-cursors",
+    "theme": "catppuccin-mocha-light-cursors",
     "size": 24,
     "niri": {
       "hideWhenTyping": false,
@@ -587,17 +587,17 @@
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
-        "workspaceSwitcher"
+        "workspaceSwitcher",
+        {
+          "id": "music",
+          "enabled": true
+        }
       ],
       "centerWidgets": [
         "clock",
         "weather"
       ],
       "rightWidgets": [
-        {
-          "id": "music",
-          "enabled": true
-        },
         "systemTray",
         "clipboard",
         "cpuUsage",
