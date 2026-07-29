@@ -43,17 +43,13 @@ alias gadog='PAGER="less -F -X" git log --all --decorate --oneline --graph'
 # =========================================================
 
 alias fzf='fzf --height 80% --layout reverse --border'
-alias pinfo="pacman -Qq | fzf --preview 'pacman -Qi {}'"
-alias pinstall="pacman -Sl | awk '{print \$2}' | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman --needed -S"
-alias yinstall="yay -Sl | awk '{print \$2}' | fzf -m --preview 'yay -Si {}' --layout=reverse | xargs -ro yay --needed -S"
-alias puninstall="pacman -Qq | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman -Rsc"
+alias pacinfo="pacman -Qq | fzf --preview 'pacman -Qi {}'"
+alias pacinstall="pacman -Sl | awk '{print \$2}' | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman --needed -S"
+alias yayinstall="yay -Sl | awk '{print \$2}' | fzf -m --preview 'yay -Si {}' --layout=reverse | xargs -ro yay --needed -S"
+alias pacuninstall="pacman -Qq | fzf -m --preview 'pacman -Si {}' --layout=reverse | xargs -ro sudo pacman -Rsc"
 
 # =========================================================
 # Yt-dlp
 # =========================================================
 alias yt-dlp='yt-dlp --cookies-from-browser brave+gnomekeyring:~/.config/BraveSoftware/Brave-Origin/'
 
-# =========================================================
-# Run0 
-# =========================================================
-alias sudo='run0 --background="48;2;65;72;104"'
