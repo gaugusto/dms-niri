@@ -192,8 +192,8 @@ recent-windows {
 }
 
 binds {
-  Mod+B hotkey-overlay-title="Open a Browser: brave-origin" {
-    spawn "brave-origin";
+  Mod+B hotkey-overlay-title="Open the bookmarks menu" {
+    spawn-sh "~/.local/bin/bookmarks.sh";
   }
 
   Mod+E hotkey-overlay-title="Nautilus" {
