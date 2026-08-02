@@ -310,7 +310,7 @@
   "iconThemePerMode": false,
   "lastAppliedIconTheme": "",
   "cursorSettings": {
-    "theme": "catppuccin-mocha-light-cursors",
+    "theme": "catppuccin-mocha-dark-cursors",
     "size": 24,
     "niri": {
       "hideWhenTyping": false,
@@ -387,11 +387,6 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
-  "bluetoothDevicePins": {},
-  "audioInputDevicePins": {},
-  "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -560,13 +555,15 @@
     "LG Electronics LG ULTRAWIDE 310AZERA4820": {
       "hotCorners": {
         "off": true
-      }
+      },
+      "disabled": true
     },
     "Technical Concepts Ltd 34R83Q 942300A590A": {
       "hotCorners": {
         "off": true
       },
-      "focusAtStartup": true
+      "focusAtStartup": true,
+      "disabled": true
     }
   },
   "hyprlandOutputSettings": {},
@@ -762,5 +759,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": 16,
-  "configVersion": 12
+  "configVersion": 13
 }
