@@ -592,7 +592,11 @@
       ],
       "centerWidgets": [
         "clock",
-        "weather"
+        "weather",
+        {
+          "id": "notificationButton",
+          "enabled": true
+        }
       ],
       "rightWidgets": [
         "systemTray",
@@ -600,8 +604,7 @@
         "cpuUsage",
         "memUsage",
         "battery",
-        "controlCenterButton",
-        "notificationButton"
+        "controlCenterButton"
       ],
       "spacing": 4,
       "innerPadding": 4,
