@@ -10,13 +10,13 @@ gestures {
 
 input {
     keyboard {
-        xkb {
-            layout "br"
-        }
+      xkb {
+        layout "br"
+      }
 
-	repeat-delay 200
-    	repeat-rate 35
-        numlock
+      repeat-delay 200
+      repeat-rate 35
+      numlock
     }
 
     touchpad {
