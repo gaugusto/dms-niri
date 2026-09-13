@@ -4,7 +4,6 @@
   imports =
     [
       /etc/nixos/hardware-configuration.nix
-      inputs.dms.nixosModules.greeter
     ];
 
   # Bootloader.
@@ -88,11 +87,9 @@
 
   programs.niri.enable = true;
   programs.zsh.enable = true;
-  programs.chromium.enable = true;
 
   programs.dms-shell = {
     enable = true;
-    package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     systemd = {
       enable = true; 
@@ -100,28 +97,16 @@
     };
 
     # Core features
-    enableSystemMonitoring = true;     # System monitoring widgets (dgop)
     enableVPN = true;                  # VPN management widget
     enableDynamicTheming = true;       # Wallpaper-based theming (matugen)
     enableAudioWavelength = true;      # Audio visualizer (cava)
     enableCalendarEvents = true;       # Calendar integration (khal)
-    enableClipboardPaste = true;       # Pasting from the clipboard history (wtype)
   };
 
-  programs.dank-material-shell.greeter = {
+  programs.dms-greeter = {
     enable = true;
-    compositor = {
-      name = "niri";
-    };
-
-    # Sync your user's DankMaterialShell theme with the greeter. You'll probably want this
+    compositor.name = "niri";
     configHome = "/home/gaugusto";
-
-    # Custom config files for non-standard config locations
-    configFiles = [
-      "/home/gaugusto/.config/DankMaterialShell/settings.json"
-    ];
-
   };
 
   # Configure console keymap
@@ -143,6 +128,14 @@
 
   environment.systemPackages = with pkgs; [
     qutebrowser
+    (chromium.override {
+      enableWideVine = true;
+      commandLineArgs = [
+        "--enable-features=AcceleratedVideoEncoder"
+        "--ignore-gpu-blocklist"
+        "--enable-zero-copy"
+      ];
+    })
     neovim
     fastfetch
     wget
