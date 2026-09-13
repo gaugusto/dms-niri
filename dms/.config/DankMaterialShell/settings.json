@@ -118,12 +118,12 @@
       "hoverPopoutDelay": 150,
       "island": true,
       "islandFloating": false,
-      "islandNotificationExpand": true,
+      "islandNotificationExpand": false,
       "islandNotificationBadgeClearOnOpen": true,
       "islandSatellitePosition": "island",
       "islandInteractionMode": "click",
       "islandPalette": "default",
-      "islandMediaClockVisible": false,
+      "islandMediaClockVisible": true,
       "islandHomeCompactTight": false,
       "islandHomeClockDisplay": "both",
       "islandUseOverlayLayer": false,
@@ -131,7 +131,9 @@
       "islandTransparency": 1,
       "islandSatellitesEnabled": true,
       "islandSatelliteBackground": true,
-      "islandOuterGap": 4
+      "islandOuterGap": 4,
+      "islandSatelliteGothCorners": true,
+      "islandSatelliteGap": 12
     }
   ],
   "desktopClockCustomColor": {
