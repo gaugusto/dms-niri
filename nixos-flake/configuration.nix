@@ -86,6 +86,8 @@
     pulse.enable = true;
   };
 
+  services.upower.enable = true;
+
   programs.niri.enable = true;
   programs.zsh.enable = true;
 
