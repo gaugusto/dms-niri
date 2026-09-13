@@ -2,7 +2,7 @@
 
 exec > /dev/null 2>&1 
 
-BROWSER="brave-origin"
+BROWSER="chromium"
 BOOKMARKS="$HOME/.local/share/bookmarks"
 
 SEL="$(awk '{print $1}' "$BOOKMARKS" | rofi -i -dmenu -format d -p "Bookmarks:")"
