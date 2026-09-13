@@ -17,8 +17,9 @@
   "blurWallpaperOnOverview": true,
   "controlCenterShowMicPercent": true,
   "appIdSubstitutions": [],
+  "networkPreference": "wifi",
   "cursorSettings": {
-    "theme": "catppuccin-mocha-dark-cursors",
+    "theme": "Qogir",
     "size": 24,
     "niri": {
       "hideWhenTyping": false,
