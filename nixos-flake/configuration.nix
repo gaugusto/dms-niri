@@ -13,6 +13,7 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.initrd.luks.devices."luks-2ada6bc6-e199-4cd9-9870-20875c4c613b".device = "/dev/disk/by-uuid/2ada6bc6-e199-4cd9-9870-20875c4c613b";
 
   hardware.graphics = {
     enable = true;
@@ -164,6 +165,7 @@
     stow
     lazygit
     rofi
+    qogir-icon-theme
   ];
 
   fonts.packages = with pkgs; [
