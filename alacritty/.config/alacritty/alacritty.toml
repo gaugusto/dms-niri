@@ -35,3 +35,4 @@ bindings = [
   { key = "Key0",    mods = "Control",       action = "ResetFontSize"    },
   { key = "Enter",   mods = "Shift",         chars = "\n" },
 ]
+
