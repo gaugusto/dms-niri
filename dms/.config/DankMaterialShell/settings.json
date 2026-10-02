@@ -1,7 +1,7 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
-  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/tokyoNightDark/theme.json",
+  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/catppuccin/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
       "dark": {
@@ -18,7 +18,7 @@
   "controlCenterShowMicPercent": true,
   "appIdSubstitutions": [],
   "cursorSettings": {
-    "theme": "catppuccin-mocha-dark-cursors",
+    "theme": "Qogir-cursors",
     "size": 24,
     "niri": {
       "hideWhenTyping": false,
