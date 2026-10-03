@@ -1,7 +1,7 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
-  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/tokyoNightDark/theme.json",
+  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/catppuccin/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
       "dark": {
@@ -119,12 +119,12 @@
       "hoverPopoutDelay": 150,
       "island": true,
       "islandFloating": false,
-      "islandNotificationExpand": true,
+      "islandNotificationExpand": false,
       "islandNotificationBadgeClearOnOpen": true,
       "islandSatellitePosition": "island",
       "islandInteractionMode": "click",
       "islandPalette": "default",
-      "islandMediaClockVisible": false,
+      "islandMediaClockVisible": true,
       "islandHomeCompactTight": false,
       "islandHomeClockDisplay": "both",
       "islandUseOverlayLayer": false,
@@ -132,7 +132,9 @@
       "islandTransparency": 1,
       "islandSatellitesEnabled": true,
       "islandSatelliteBackground": true,
-      "islandOuterGap": 4
+      "islandOuterGap": 4,
+      "islandSatelliteGothCorners": true,
+      "islandSatelliteGap": 12
     }
   ],
   "desktopClockCustomColor": {
