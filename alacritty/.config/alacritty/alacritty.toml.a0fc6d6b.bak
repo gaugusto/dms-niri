@@ -6,7 +6,7 @@ import = [
 [window]
 decorations = "None"
 padding = { x = 12, y = 12 }
-opacity = 0.8
+opacity = 0.9
 
 [scrolling]
 history = 3023
@@ -35,4 +35,3 @@ bindings = [
   { key = "Key0",    mods = "Control",       action = "ResetFontSize"    },
   { key = "Enter",   mods = "Shift",         chars = "\n" },
 ]
-
