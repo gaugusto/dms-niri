@@ -1,7 +1,7 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
-  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/catppuccin/theme.json",
+  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/tokyoNightDark/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
       "dark": {
@@ -147,7 +147,8 @@
     "hslHue": -1,
     "hslSaturation": 0,
     "hslLightness": 1,
-    "valid": true
+    "valid": true,
+    "rgba": -1
   },
   "systemMonitorCustomColor": {
     "r": 1,
@@ -160,7 +161,8 @@
     "hslHue": -1,
     "hslSaturation": 0,
     "hslLightness": 1,
-    "valid": true
+    "valid": true,
+    "rgba": -1
   },
   "builtInPluginSettings": {
     "dms_settings_search": {
