@@ -77,12 +77,10 @@ overview {
     }
 }
 
-window-rule {
-    match app-id="^myclipboardplaylist$"
-    open-floating true
-    default-column-width { fixed 900; }
-    default-window-height { fixed 800; }
-}
+// window-rule {
+//     match app-id="^myclipboardplaylist$"
+//     open-floating true
+// }
 
 environment {
   XDG_CURRENT_DESKTOP "niri"
@@ -211,11 +209,11 @@ binds {
     spawn-sh "~/.local/bin/dmenus";
   }
 
-  Mod+Alt+Y hotkey-overlay-title="Watch videos" {
-    spawn-sh ".local/bin/watch.sh";
-  }
+  // Mod+Alt+Y hotkey-overlay-title="Watch videos" {
+  //   spawn-sh ".local/bin/watch.sh";
+  // }
 
-  Mod+Ctrl+Y hotkey-overlay-title="Watch videos" {
+  Mod+Alt+Y hotkey-overlay-title="Watch videos" {
     spawn-sh ".cargo/bin/my_clipboard_playlist";
   }
 
