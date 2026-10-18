@@ -209,6 +209,10 @@ binds {
     spawn-sh "~/.local/bin/dmenus";
   }
 
+  Mod+Alt+M hotkey-overlay-title="Aprender música" {
+    spawn "qs" "-p" "/home/gaugusto/Documentos/the-music-app";
+  }
+
   // Mod+Alt+Y hotkey-overlay-title="Watch videos" {
   //   spawn-sh ".local/bin/watch.sh";
   // }
