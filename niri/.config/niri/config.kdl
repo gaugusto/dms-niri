@@ -210,7 +210,7 @@ binds {
   }
 
   Mod+Alt+M hotkey-overlay-title="Aprender música" {
-    spawn "qs" "-p" "/home/gaugusto/Documentos/the-music-app";
+    spawn-sh "/home/gaugusto/Documentos/the-music-app/build/the-music-app";
   }
 
   // Mod+Alt+Y hotkey-overlay-title="Watch videos" {
