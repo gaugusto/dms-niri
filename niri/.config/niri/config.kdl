@@ -66,6 +66,10 @@ layout {
     struts {
     }
 }
+window-rule {
+    match app-id="^myclipboardplaylist$"
+    default-column-width { proportion 0.2; }
+}
 layer-rule {
     match namespace="^quickshell$"
     match namespace="^rofi$"
