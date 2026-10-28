@@ -6,14 +6,7 @@ set -e
 PACKAGES=(
   adw-gtk-theme
   bat
-  bluez-utils
-  catppuccin-cursors-mocha
-  clang
-  cliphist
   eza
-  fd
-  firefox
-  chromium
   fzf
   lazygit
   lua-argparse
@@ -21,18 +14,11 @@ PACKAGES=(
   luarocks
   mpv
   nwg-look
-  pavucontrol
-  plymouth
   polkit-gnome
   ripgrep
-  snapper
-  sof-firmware
-  stow
-  system-config-printer
   tree
   ttf-jetbrains-mono-nerd
-  walker-bin
-  zram-generator
+  brave-origin-bin
 )
 
 sudo pacman -Syy

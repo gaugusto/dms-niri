@@ -1,7 +1,7 @@
 {
-  "currentThemeName": "custom",
-  "currentThemeCategory": "registry",
-  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/tokyoNightDark/theme.json",
+  "currentThemeName": "dynamic",
+  "currentThemeCategory": "dynamic",
+  "customThemeFile": "/home/gaugusto/.config/DankMaterialShell/themes/tokyoNightStorm/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
       "dark": {
@@ -11,14 +11,18 @@
     }
   },
   "cornerRadius": 12,
+  "niriLayoutGapsOverride": 8,
+  "niriLayoutRadiusOverride": 5,
+  "niriLayoutBorderSize": 2,
   "calendarBackend": "dankcal",
   "popoutAnimationSpeed": 4,
   "blurEnabled": true,
   "blurWallpaperOnOverview": true,
   "controlCenterShowMicPercent": true,
   "appIdSubstitutions": [],
+  "networkPreference": "wifi",
   "cursorSettings": {
-    "theme": "Qogir-cursors",
+    "theme": "Qogir",
     "size": 24,
     "niri": {
       "hideWhenTyping": false,
