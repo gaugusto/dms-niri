@@ -210,8 +210,16 @@ binds {
     spawn "nautilus";
   }
   
+  Mod+Shift+C hotkey-overlay-title="Claude code" {
+    spawn-sh "alacritty -e zsh -c 'cd ~/Claude && claude; exec zsh'";
+  }
+
   Mod+Alt+H hotkey-overlay-title="Hide bar" {
     spawn "dms" "ipc" "call" "bar" "toggle" "index" "0";
+  }
+ 
+  Mod+Alt+O hotkey-overlay-title="Show overview (calendar)" {
+    spawn "dms" "ipc" "call" "dash" "toggle" "overview";
   }
 
   Mod+Alt+D hotkey-overlay-title="Open D-Menu" {
