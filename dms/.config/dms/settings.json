@@ -153,8 +153,8 @@
     }
   },
   "launcherStyle": "full",
-  "currentThemeCategory": "registry",
-  "currentThemeName": "custom",
+  "currentThemeCategory": "dynamic",
+  "currentThemeName": "dynamic",
   "matugenSpec": "2021",
   "customThemeFile": "/home/gaugusto/.config/dms/themes/tokyoNight/theme.json",
   "registryThemeVariants": {
@@ -192,5 +192,6 @@
   "acPostLockMonitorTimeout": 60,
   "batteryLockTimeout": 300,
   "batteryMonitorTimeout": 180,
-  "batteryPostLockMonitorTimeout": 60
+  "batteryPostLockMonitorTimeout": 60,
+  "matugenScheme": "scheme-fidelity"
 }
