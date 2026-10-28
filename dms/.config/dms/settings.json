@@ -117,7 +117,7 @@
       "autoHide": false,
       "autoHideDelay": 250,
       "openOnOverview": false,
-      "visible": true,
+      "visible": false,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
       "followInterfaceStyle": true,
@@ -234,10 +234,10 @@
     }
   },
   "launcherStyle": "full",
-  "currentThemeCategory": "dynamic",
-  "currentThemeName": "dynamic",
+  "currentThemeCategory": "registry",
+  "currentThemeName": "custom",
   "matugenSpec": "2025",
-  "customThemeFile": "/home/gaugusto/.config/dms/themes/catppuccin/theme.json",
+  "customThemeFile": "/home/gaugusto/.config/dms/themes/tokyoNight/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
       "dark": {
