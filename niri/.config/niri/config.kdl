@@ -209,6 +209,10 @@ binds {
   Mod+E hotkey-overlay-title="Nautilus" {
     spawn "nautilus";
   }
+  
+  Mod+Alt+H hotkey-overlay-title="Hide bar" {
+    spawn "dms" "ipc" "call" "bar" "toggle" "index" "0";
+  }
 
   Mod+Alt+D hotkey-overlay-title="Open D-Menu" {
     spawn-sh "~/.local/bin/dmenus";
