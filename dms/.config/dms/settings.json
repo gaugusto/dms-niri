@@ -94,7 +94,6 @@
         "systemTray",
         "clipboard",
         "cpuUsage",
-        "memUsage",
         "notificationButton",
         "battery",
         "controlCenterButton"
@@ -278,5 +277,13 @@
   "blurLayerOutlineOpacity": 0,
   "iconThemeDark": "Qogir",
   "barInsetPaddingSyncAll": false,
-  "widgetColorMode": "default"
+  "widgetColorMode": "default",
+  "spotlightSectionViewModes": {
+    "plugin_dankLauncherKeys": "list"
+  },
+  "launcherPluginVisibility": {
+    "dankLauncherKeys": {
+      "allowWithoutTrigger": true
+    }
+  }
 }
