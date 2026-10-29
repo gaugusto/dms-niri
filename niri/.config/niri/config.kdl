@@ -246,6 +246,10 @@ binds {
     spawn "dms" "cl" "clear" ;
   }
 
+  Mod+Ctrl+Shift+C hotkey-overlay-title="Control Center" {
+    spawn "dms" "ipc" "call" "control-center" "toggle";
+  }
+
   Mod+Ctrl+P hotkey-overlay-title="Color Picker" {
     spawn "dms" "color" "pick" "-a";
   }
