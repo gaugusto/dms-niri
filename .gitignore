@@ -2,3 +2,4 @@ nvim/.config/nvim/lazy-lock.json
 nvim/.config/nvim/nvim-pack-lock.json
 scripts/.local/share
 zsh/.config/zsh/plugins/*
+niri/.config/niri/binds-private.kdl
