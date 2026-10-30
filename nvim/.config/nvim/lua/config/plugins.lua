@@ -12,6 +12,7 @@ local plugins_to_load = {
   "plenary",
   "telescope",
   "highlight-colors",
+  "render-markdown",
 }
 
 for _, name in ipairs(plugins_to_load) do
