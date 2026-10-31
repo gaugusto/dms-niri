@@ -4,6 +4,6 @@
 // ! PLACE YOUR CUSTOM CONFIGURATION ELSEWHERE !
 
 cursor {
-    xcursor-theme "Qogir-Light"
+    xcursor-theme "Qogir-cursors"
     xcursor-size 24
 }
