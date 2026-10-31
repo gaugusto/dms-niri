@@ -83,12 +83,33 @@
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
-        "workspaceSwitcher"
+        "workspaceSwitcher",
+        {
+          "id": "music",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": true
+        }
       ],
       "centerWidgets": [
-        "music",
-        "clock",
-        "weather"
+        {
+          "id": "music",
+          "enabled": false
+        },
+        {
+          "id": "clock",
+          "enabled": false
+        },
+        {
+          "id": "weather",
+          "enabled": false
+        }
       ],
       "rightWidgets": [
         "systemTray",
@@ -142,7 +163,8 @@
       "islandHomeCompactTight": false,
       "maximizeWidgetText": false,
       "hoverPopouts": false,
-      "barInsetPadding": -1
+      "barInsetPadding": -1,
+      "barLengthPercent": 50
     },
     {
       "id": "dot1793220737987",
@@ -246,7 +268,7 @@
     }
   },
   "cursorSettings": {
-    "theme": "Qogir-Light",
+    "theme": "Qogir-cursors",
     "size": 24,
     "niri": {
       "hideWhenTyping": false,
