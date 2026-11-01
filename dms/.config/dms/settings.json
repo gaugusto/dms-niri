@@ -301,7 +301,8 @@
   "barInsetPaddingSyncAll": false,
   "widgetColorMode": "default",
   "spotlightSectionViewModes": {
-    "plugin_dankLauncherKeys": "list"
+    "plugin_dankLauncherKeys": "list",
+    "apps": "list"
   },
   "launcherPluginVisibility": {
     "dankLauncherKeys": {
