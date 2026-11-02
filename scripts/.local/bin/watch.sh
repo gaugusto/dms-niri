@@ -10,7 +10,7 @@ if [ -z "$LINKS" ]; then
 fi
 
 # 4. Abre o rofi para seleção
-ESCOLHA=$(echo "$LINKS" | rofi -dmenu)
+ESCOLHA=$(echo "$LINKS" | dms dmenu)
 
 # 5. Se o usuário não cancelou (Esc), executa o MPV
 if [ -n "$ESCOLHA" ]; then

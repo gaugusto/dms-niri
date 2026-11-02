@@ -18,7 +18,7 @@ selection=$(find "$PASSWORD_STORE_DIR" -name "*.gpg" -type f | \
         sub(/\.gpg$/, ""); 
         print 
     }' | \
-    walker --dmenu)
+    dms dmenu)
 
 # Executa o pass se houver uma seleção
 if [ -n "$selection" ]; then

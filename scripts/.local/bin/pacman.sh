@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 CONFIGS=(
+  "Atualizar tudo - paru"
   "Atualizar tudo - yay"
   "Atualizar AUR - yay -Sua"
   "Estatísticas - yay -Ps"
@@ -10,7 +11,7 @@ CONFIGS=(
   "Remove pacman orphans - sudo pacman -Rs \$(pacman -Qdtq)"
 )
 
-CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | rofi -dmenu -i)
+CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | dms dmenu -p "Escolha:")
 
 # Se o usuário cancelar, sai do script
 [ -z "$CHOICE" ] && exit 1
