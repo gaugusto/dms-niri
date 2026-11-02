@@ -255,9 +255,9 @@
     }
   },
   "launcherStyle": "full",
-  "currentThemeCategory": "registry",
-  "currentThemeName": "custom",
-  "matugenSpec": "2025",
+  "currentThemeCategory": "dynamic",
+  "currentThemeName": "dynamic",
+  "matugenSpec": "dms",
   "customThemeFile": "/home/gaugusto/.config/dms/themes/tokyoNight/theme.json",
   "registryThemeVariants": {
     "catppuccin": {
