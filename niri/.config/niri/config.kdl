@@ -210,15 +210,10 @@ binds {
     spawn-sh "~/.local/bin/bookmarks.sh";
   }
 
-
   Mod+E hotkey-overlay-title="Nautilus" {
     spawn "nautilus";
   }
 
-  Mod+Alt+E hotkey-overlay-title="Dux Files | File Manager" {
-    spawn "dfiles" "toggle";
-  }
-  
   Mod+Shift+C hotkey-overlay-title="Claude code" {
     spawn-sh "alacritty -e zsh -c 'cd ~/Claude && claude; exec zsh'";
   }
@@ -239,10 +234,6 @@ binds {
     spawn-sh "/home/gaugusto/Documentos/the-music-app/build/the-music-app";
   }
 
-  // Mod+Alt+Y hotkey-overlay-title="Watch videos" {
-  //   spawn-sh ".local/bin/watch.sh";
-  // }
-
   Mod+Alt+Y hotkey-overlay-title="Watch videos" {
     spawn-sh ".cargo/bin/my_clipboard_playlist";
   }
@@ -261,6 +252,10 @@ binds {
 
   Mod+Ctrl+P hotkey-overlay-title="Color Picker" {
     spawn "dms" "color" "pick" "-a";
+  }
+
+  Mod+Shift+Ctrl+Slash hotkey-overlay-title="Keybinds" {
+    spawn "dms" "ipc" "call" "keybinds" "toggle" "niri";
   }
 }
 
