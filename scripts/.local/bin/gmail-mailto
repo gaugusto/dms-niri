@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+import os, sys
+from urllib.parse import quote
+url = "https://mail.google.com/mail/?extsrc=mailto&url=" + quote(sys.argv[1] if len(sys.argv) > 1 else "mailto:", safe="")
+os.execvp("brave-origin", ["brave-origin", url])
