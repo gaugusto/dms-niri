@@ -1,0 +1,13 @@
+[Unit]
+Description=Lembrete para tomar água a cada 30 minutos
+# Liga e desliga junto com a sessão gráfica
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Timer]
+OnCalendar=*-*-* *:00,30:00
+AccuracySec=1s
+
+[Install]
+WantedBy=graphical-session.target

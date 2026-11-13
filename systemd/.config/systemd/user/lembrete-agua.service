@@ -1,0 +1,9 @@
+[Unit]
+Description=Lembrete para tomar água
+# Só roda se houver uma sessão gráfica (Wayland ou Xorg)
+ConditionEnvironment=|WAYLAND_DISPLAY
+ConditionEnvironment=|DISPLAY
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/notify-send -u critical -t 0 -i dialog-information -a "Lembrete" "💧 Hora de beber água!" "Toma um copo d'água."
