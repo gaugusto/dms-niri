@@ -256,8 +256,8 @@
     }
   },
   "launcherStyle": "full",
-  "currentThemeCategory": "dynamic",
-  "currentThemeName": "dynamic",
+  "currentThemeCategory": "registry",
+  "currentThemeName": "custom",
   "matugenSpec": "dms",
   "customThemeFile": "/home/gaugusto/.config/dms/themes/tokyoNight/theme.json",
   "registryThemeVariants": {

@@ -23,6 +23,7 @@ Cada pasta da raiz é um pacote do [GNU Stow](https://www.gnu.org/software/stow/
 | `chromium` | `~/.config/chromium-flags.conf` | Flags Wayland e de aceleração de vídeo |
 | `fontconfig` | `~/.config/fontconfig` | Fontes padrão |
 | `gamemode` | `~/.config/gamemode.ini` | Feral GameMode |
+| `systemd` | `~/.config/systemd/user` | Unidades de usuário: lembrete de beber água (`notify-send` às :00 e :30, só com sessão gráfica). Instalar com `--no-folding` |
 | `boot` | `/boot/loader/entries` | Entrada do systemd-boot para o Windows 11 (instalar com `-t /`) |
 | `nixos-flake` | — | Flake NixOS separado (`nixos-btw`); **não** é um pacote do Stow |
 
@@ -62,7 +63,11 @@ Para adicionar ou remover pacotes do bootstrap, edite o array `PACKAGES` em `02_
 ```sh
 cd ~/dms-niri
 stow niri dms zsh nvim alacritty rofi scripts bookmarks backgrounds mpv git chromium fontconfig gamemode
+stow --no-folding systemd
+systemctl --user daemon-reload
 ```
+
+O pacote `systemd` já traz o link em `graphical-session.target.wants/`, então o timer fica habilitado só com o Stow. Use `--no-folding` para que outras unidades habilitadas na máquina não sejam gravadas dentro do repositório. Não use `systemctl --user disable`/`reenable` nessas unidades: o systemd apaga os links do Stow. Para desligar o lembrete, use `systemctl --user stop lembrete-agua.timer` (até o próximo login) ou `stow -D systemd` (de vez).
 
 Se já existirem arquivos no destino, o Stow vai abortar. Faça backup e remova os arquivos antes, ou use `stow --adopt <pacote>` (isso move os arquivos existentes para dentro do repositório; confira com `git diff` depois).
 
