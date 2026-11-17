@@ -269,7 +269,7 @@
     }
   },
   "cursorSettings": {
-    "theme": "Qogir-cursors",
+    "theme": "Qogir-Manjaro-Light",
     "size": 24,
     "niri": {
       "hideWhenTyping": false,
@@ -310,5 +310,6 @@
       "allowWithoutTrigger": true
     }
   },
-  "desktopContextMenu": "off"
+  "desktopContextMenu": "off",
+  "textRenderType": 0
 }
