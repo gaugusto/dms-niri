@@ -4,3 +4,5 @@ scripts/.local/share
 zsh/.config/zsh/plugins/*
 niri/.config/niri/binds-private.kdl
 dms-niri/scripts/.local/bin/claude
+herdr/.config/herdr/*
+!herdr/.config/herdr/config.toml
